@@ -36,7 +36,7 @@ composer install
 MySQL Config:
 ```
 Server host : localhost
-Database : thecoffeehouse
+Database : ecom
 Port : 3306
 Username : root
 Password : (optional)
