@@ -15,69 +15,57 @@ With mvc structure we divide project into many folder: <br />
 It's a simple php-mvc template version 1.0. We will maintain and develop in future.
 
 ## SET UP
+### Installation
+1. To run php and mysql conveniently together install XAMPP: 
+    - https://www.apachefriends.org/download.html
+2. After that install Composer (a PHP package manager):
+    - https://getcomposer.org/download/
+3. Restart computer
+4. Delete *vendor* folder if exist
+5. Check for Composer version:
+```
+composer --version
+```
+6. Install project packages:
 
-### Tạo mysql database:
+```
+composer install
+```
+### Generating MySQL Database:
 
-Đầu tiên, sử dụng DBMS của bạn tạo một connection mysql database với cấu hình sau:
-
+MySQL Config:
+```
 Server host : localhost
 Database : thecoffeehouse
 Port : 3306
 Username : root
-Password : (có hay không cũng được)
-
-### Cài đặt Composer (package manager của PHP)
-
-Bước 1: Vào https://getcomposer.org/ để tải Composer về rồi install tùy theo máy.
-
-Bước 2: Kiểm tra xem Composer đã đựoc cài chưa (phải cài được mới run được project)
-
-```bash
-composer --version
+Password : (optional)
 ```
 
-Note: Nếu đã có folder vender trên máy rồi thì hãy xóa nó đi rồi sang bước 3.
+### Creating dotenv
 
-Bước 3: Chạy install package theo composer.json :
-
-```bash
-composer install
-```
-
-Cách dùng composer giống với xài npm với NodeJS, đều là package manager thôi, có gì tham khảo.
-
-### Tạo dotenv
-
-Vào folder project, tạo một file .env rồi bỏ vào config sau:
+In folder project, create file .env with the following config:
 
 ```bash
-DB_DSN=mysql:host=localhost;dbname=thecoffeehouse
+DB_DSN=mysql:host=localhost;dbname=ecom
 DB_USER=root
-DB_PASSWORD=quan0402
+DB_PASSWORD=admin
 ```
-
-trong đó, password của bạn là gì thì điền vô, khôn
-
-### Chay migration:
-
-Mở terminal lên rồi lệnh sau:
-
+### Run migration:
+In terminal:
 ```bash
 php migrations.php
 ```
-
-Terminal trả về như sau là bạn đã chạy migrate được rồi:
-
+The terminal should return:
 ```bash
 [2021-10-28 19:10:49] - Applying migration m0001_initial.php
 [2021-10-28 19:10:49] - Applyied migration m0001_initial.php
 ```
 
-Nếu không được như vậy thì hãy drop hết table trong database rồi chạy migrate lại.
-
+Else, drop all table in database and re-run migration
 ## Run project
 
-Để chạy project, chạy lệnh sau:
+To run the project, type the following into the terminal:
 
 ```bash
 cd public
