@@ -32,6 +32,11 @@ composer --version
 composer install
 ```
 ### Generating MySQL Database:
+phpMyAdmin config:
+If using XAMPP, goto ```C:\xampp\phpMyAdmin``` and edit ```config.inc.php``` the following line:
+```
+$cfg['Servers'][$i]['password'] = 'admin';
+```
 
 MySQL Config:
 ```
@@ -39,7 +44,7 @@ Server host : localhost
 Database : ecom
 Port : 3306
 Username : root
-Password : (optional)
+Password : admin
 ```
 
 ### Creating dotenv
@@ -51,6 +56,11 @@ DB_DSN=mysql:host=localhost;dbname=ecom
 DB_USER=root
 DB_PASSWORD=admin
 ```
+
+### Run MySQL DBMS
+Turn on XAMPP
++ Start Apache
++ Start MySQL
 ### Run migration:
 In terminal:
 ```bash
