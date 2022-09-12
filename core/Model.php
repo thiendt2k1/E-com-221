@@ -13,7 +13,8 @@ abstract class Model
     public const RULE_NUMBER = 'number';
     public const RULE_INVALID_EMAIL = 'invalid email';
     public const RULE_WRONG_PASSWORD = 'wrong password';
-
+    
+    // Set that a Model must define the rules
     abstract public function rules(): array;
 
     public function getLabel($attribute)
@@ -25,7 +26,9 @@ abstract class Model
 
     public function loadData($data)
     {
+        // For each data parse from the HTML
         foreach ($data as $key => $value) {
+            // If model has that property from the HTML pass the HTML value to it
             if (property_exists($this, $key)) {
                 $this->{$key} = $value;
             }

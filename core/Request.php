@@ -7,10 +7,13 @@ class Request
     public function getPath()
     {
         $path = $_SERVER['REQUEST_URI'] ?? '/';
+        // Take everything behind the '?' from REQUEST_URI 
         $position = strpos($path, '?');
+        // If we dont have any '?' we can just return path
         if ($position === false) {
             return $path;
         }
+        // Else return substr before '?'
         return substr($path, 0, $position);
     }
 
@@ -23,7 +26,7 @@ class Request
 
     public function getMethod()
     {
-
+        // return 'get' or 'post' in lower case for router to differentiate
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
 

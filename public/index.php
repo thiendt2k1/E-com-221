@@ -14,6 +14,7 @@ use app\controllers\CartController;
 use app\controllers\OrdersController;
 use app\controllers\OrderDetailController;
 
+//Configured path to autoload php
 require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
@@ -26,10 +27,10 @@ $config = [
         'password' => $_ENV['DB_PASSWORD'],
     ]
 ];
-
+// The project directory
 $app = new Application(dirname(__DIR__), $config);
 
-$app->router->get('/', [SiteController::class, 'home']);
+$app->router->get('/', [SiteController::class, 'home']);    //Uses home method of sitecontroller class
 $app->router->get('/register', [SiteController::class, 'register']);
 $app->router->post('/register', [SiteController::class, 'register']);
 $app->router->get('/login', [SiteController::class, 'login']);
@@ -58,7 +59,6 @@ $app->router->get('/orders', [OrdersController::class, 'orders']);
 $app->router->get('/order', [OrderDetailController::class, 'orderDetail']);
 
 
-// Admin nè Long, bắt trước rồi làm theo, mà nhớ xem kỹ giùm anh nha em
 // admin general
 $app->router->get('/admin', [AdminController::class, 'index']);
 $app->router->get('/admin/sales', [SaleController::class, 'index']);

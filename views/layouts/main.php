@@ -139,6 +139,7 @@ header("Content-type: text/html; charset=utf-8");
                 <p><?php echo app\core\Application::$app->session->getFlash('success') ?></p>
             </div>
             <?php endif; ?>
+            <!-- Inject Whatever page between formatted placeholder -->
             {{content}}
         </div>
     </div>
