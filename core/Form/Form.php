@@ -17,6 +17,7 @@ class Form
         echo '</form>';
     }
 
+    // Render the input form of a model attribute (mainly a way to generate clean html)
     public function field(Model $model, $attribute)
     {
         return new Field($model, $attribute);

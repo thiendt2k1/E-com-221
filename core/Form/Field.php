@@ -27,6 +27,7 @@ class Field
     public function __toString()
     {
         return sprintf(
+            // We use different type for fields like password where character should be hidden
             '
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">%s</label>

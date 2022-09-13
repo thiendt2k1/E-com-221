@@ -124,7 +124,7 @@ class Order extends DBModel
         $totalPayment = 0;
         $db = Database::getInstance();
         $req = $db->query(
-            "select products.price, order_detail.order_id, orders.id, order_detail.size, order_detail.quantity
+            "select products.price, order_detail.order_id, orders.id, order_detail.quantity
             from ((order_detail
             inner join products on order_detail.product_id = products.id)
             inner join orders on order_detail.order_id = orders.id) 

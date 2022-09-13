@@ -3,9 +3,11 @@
         <h1>Đăng ký</h1>
     </div>
     <div class="card-body">
+        <!-- Expose begin method from Form.php -->
         <?php $form = app\core\Form\Form::begin('', "post") ?>
             <div class="row">
                 <div class="col">
+                    <!-- Call method field from Form.php to print out the attribute in a Form format -->
                     <?php echo $form->field($model, 'firstname') ?>
                 </div>
                 <div class="col">
@@ -33,6 +35,7 @@
                     <?php echo $form->field($model, 'passwordConfirm')->passwordField() ?>
                 </div>  
             </div>
+            
             <div class="remember-me">
                 <input type="checkbox" required>
                 <span style="color: #000000">Tôi chấp nhận các điều khoản của dịch vụ</span>

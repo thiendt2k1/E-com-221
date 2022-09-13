@@ -17,6 +17,7 @@ use app\controllers\OrderDetailController;
 //Configured path to autoload php
 require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+// Assign environment variable to $_ENV
 $dotenv->load();
 
 $config = [
