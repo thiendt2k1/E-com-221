@@ -1,7 +1,7 @@
 <div class="menu">
     <div class="menu__header">
         <img class="menu-image" src="/images/menu.png" alt="menu-image" />
-        <h3>Thực đơn của chúng mình</h3>
+        <h3>Our Movies</h3>
     </div>
 
     <div class="menu__search">
@@ -12,12 +12,12 @@
                         <div class="form-floating mb-3">
                             <input type="text" name="keyword" class="form-control" id="floatingInput"
                                 placeholder="Tìm kiếm theo tên sản phẩm bạn quan tâm" aria-describedby="button-addon1">
-                            <label for="floatingInput">Tìm kiếm theo tên sản phẩm bạn quan tâm</label>
+                            <label for="floatingInput">Look for your favourite shows</label>
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-2">
                         <button class="btn btn-outline-secondary search-button" type="submit"
-                            id="button-addon1">Tìm</button>
+                            id="button-addon1">Search</button>
                     </div>
                 </div>
             </div>
@@ -31,15 +31,14 @@
                 <img src="/images/grid.png" alt="coffee-cup" class="option-image" />
             </div>
             <h6>
-                Tất cả sản phẩm
-            </h6>
+                All shows
         </a>
         <a class="option" href="/menu?category_id=1">
             <div class="option-image-block">
                 <img src="/images/coffee-cup.png" alt="coffee-cup" class="option-image" />
             </div>
             <h6>
-                Cà phê
+                Movies
             </h6>
         </a>
         <a class="option" href="/menu?category_id=5">
@@ -47,7 +46,7 @@
                 <img src="/images/milk-tea.png" alt="coffee-cup" class="option-image" />
             </div>
             <h6>
-                Trà trái cây - Trà sửa
+                TV show
             </h6>
         </a>
         <a class="option" href="/menu?category_id=2">
@@ -55,7 +54,7 @@
                 <img src="/images/milkshake.png" alt="coffee-cup" class="option-image" />
             </div>
             <h6>
-                Đá xay
+                Live action
             </h6>
         </a>
         <a class="option" href="/menu?category_id=18">
@@ -63,7 +62,7 @@
                 <img src="/images/coffee.png" alt=" coffee-cup" class="option-image" />
             </div>
             <h6>
-                Thưởng thức tại nhà
+                Animated
             </h6>
         </a>
         <a class="option" href="/menu?category_id=20">
@@ -71,7 +70,7 @@
                 <img src="/images/glass.png" alt="coffee-cup" class="option-image" />
             </div>
             <h6>
-                Tumbler collection
+                Other
             </h6>
         </a>
     </div>
@@ -81,7 +80,7 @@
             <?php if (count($params['products']) == 0)
                 echo '
                 <div class="not-found">
-                    <h3>Không tìm thấy sản phẩm !</h3>
+                    <h3>Film not found !</h3>
                 </div>
                 '
             ?>

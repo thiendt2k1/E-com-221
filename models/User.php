@@ -52,14 +52,14 @@ class User extends UserModel
     public function labels(): array
     {
         return [
-            'firstname' => 'Họ và tên đệm',
-            'lastname' => 'Tên',
+            'firstname' => 'Firstname',
+            'lastname' => 'Lastname',
             'email' => 'Email',
-            'password' => 'Mật khẩu',
-            'passwordConfirm' => 'Nhập lại mật khẩu',
-            'phone_number' => 'Số điện thoại',
-            'address' => 'Địa chỉ',
-            'role' => 'Vai trò'
+            'password' => 'Password',
+            'passwordConfirm' => 'Re-type password',
+            'phone_number' => 'Phone number',
+            'address' => 'Address',
+            'role' => 'Role'
         ];
     }
 

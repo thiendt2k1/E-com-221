@@ -59,12 +59,12 @@ class Store extends DBModel
     public function labels(): array
     {
         return [
-            'open_time' => 'Giờ mở cửa',
-            'address' => 'Địa chỉ',
-            'phone' => 'Số điện thoại',
-            'description' => 'Giới thiệu về cửa hàng',
-            'status' => 'Tình trạng cửa hàng',
-            'image_url' => 'Hình ảnh cửa hàng'
+            'open_time' => 'Open hours',
+            'address' => 'Address',
+            'phone' => 'Phone number',
+            'description' => 'About us',
+            'status' => 'Store status',
+            'image_url' => 'Store Image'
         ];
     }
 

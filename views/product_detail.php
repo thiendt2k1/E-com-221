@@ -59,13 +59,13 @@ if (Application::isGuest()) {
                                         alt="clipboard" />
                                 </span>
                                 <input name="note" type="text" class="form-control"
-                                    placeholder="Ghi chú thêm cho món này" aria-label="Note"
+                                    placeholder="Note" aria-label="Note"
                                     aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="product-detail-size">
                             <div class="product-detail-size-header">
-                                Chọn size (bắt buộc)
+                                Chọn size (bắt buộc)???????????
                             </div>
                             <div class="product-detail-size-body">
                                 <div class="form-check form-check-inline">
@@ -104,9 +104,9 @@ if (Application::isGuest()) {
                             <button type="submit" id="liveToastBtn"><span
                                     class="price"><?php echo number_format($params['product']->price, 0, ',', '.') ?>đ</span>
                                 -
-                                Thêm
-                                vào
-                                giỏ hàng</button>
+                                Add
+                                to
+                                Cart</button>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-6">
@@ -122,12 +122,11 @@ if (Application::isGuest()) {
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <img src="/images/logo/logo-2.png" width="30px" class="rounded me-2" alt="logo-2">
-                <strong class="me-auto">Kaffee store</strong>
-                <small>Bây giờ</small>
+                <strong class="me-auto">Filmware
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                Thêm vào giỏ hàng thành công.
+                Successfully added to Cart.
             </div>
         </div>
     </div>

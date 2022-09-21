@@ -80,12 +80,12 @@ class Product extends DBModel
     public function labels(): array
     {
         return [
-            'id' => 'Mã sản phẩm',
-            'name' => 'Tên sản phẩm',
-            'price' => 'Giá',
-            'description' => 'Mô tả sản phẩm',
-            'image_url' => 'Hình ảnh sản phẩm',
-            'category_id' => 'Mã mục'
+            'id' => 'Product ID',
+            'name' => 'Product name',
+            'price' => 'Price',
+            'description' => 'Description',
+            'image_url' => 'Product image',
+            'category_id' => 'Category ID'
         ];
     }
     
@@ -130,7 +130,7 @@ class Product extends DBModel
         return true;
     }
 
-    // Của Quân, đã chạy được, xin đừng xóa
+
     public static function getAllProducts()
     {
         $list = [];

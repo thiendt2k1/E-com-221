@@ -52,7 +52,7 @@ function total($params)
 <div class="cart-page">
 
     <div class="cart-page__header">
-        <h3>Giỏ hàng của bạn</h3>
+        <h3>Your cart</h3>
     </div>
     <div class="cart-page__body">
         <div class="container">
@@ -60,8 +60,8 @@ function total($params)
                 <div class="col-md-12 col-lg-8">
                     <div class="cart-page__content">
                         <div class="cart-page__content__header">
-                            <div>Các món đã chọn</div>
-                            <a class="more-item-button" href="/menu">Thêm món</a>
+                            <div>Selected product</div>
+                            <a class="more-item-button" href="/menu">Add</a>
                         </div>
                         <div class="cart-page-divider"></div>
 
@@ -72,7 +72,7 @@ function total($params)
                                 echo
                                 '<div class="cart-page-item">
                                         <div class="container">
-                                            <h4>Giỏ hàng đang trống !</h4>
+                                            <h4>Cart is empty!</h4>
                                         </div>
                                     </div>';
                             } else {
@@ -87,13 +87,13 @@ function total($params)
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-8 col-8">
                                                                 <h6>' . $param->name . '</h6>
-                                                                <div>Giá đơn vị: ' . number_format($param->price, 0, ',', '.') . ' đ</div>
+                                                                <div>Price: ' . number_format($param->price, 0, ',', '.') . ' đ</div>
                                                                 <div>Size: ' . sizeContent($param->size) . '</div>
                                                             </div>
                                                             <div class="col-lg-3 col-md-3 col-sm-8 col-8">
                                                                 <div class="product-detail-footer">
                                                                     <div class="product-detail-footer-quantity">
-                                                                        Số lượng: <input type="text" name="quantity" class="form-control quantity-input"
+                                                                        Quantity: <input type="text" name="quantity" class="form-control quantity-input"
                                                                             id="product-quantity" value="' . $param->quantity . '">
                                                                     </div>
                                                                 </div>
@@ -109,12 +109,12 @@ function total($params)
                                                             <div class="col-lg-6 col-sm-8 col-8">
                                                                 <div class="input-group mb-3">
                                                                     <input name="note" type="text" id="cart-page__note" class="form-control"
-                                                                        placeholder="Ghi chú cho sản phẩm này" aria-label="note" aria-describedby="basic-addon1"
+                                                                        placeholder="Note" aria-label="note" aria-describedby="basic-addon1"
                                                                         value="' . ($param->note) . '">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6 col-sm-4 col-4">
-                                                                <button type="submit" class="update-btn">Cập nhật</button>
+                                                                <button type="submit" class="update-btn">Update</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -128,7 +128,7 @@ function total($params)
 
 
                         <div class="cart-page__content__header">
-                            <div>Tổng cộng</div>
+                            <div>Total</div>
                         </div>
                         <div class="cart-page-divider"></div>
                         <div class="cart-page__content__total">
@@ -149,7 +149,7 @@ function total($params)
                     <form accept-charset="utf-8" action="/cart" method="post">
                         <div class="cart-page__info">
                             <div class="cart-page__content__header">
-                                <div>Địa chỉ giao hàng</div>
+                                <div>Địa chỉ giao hàng?????</div>
                             </div>
                             <div class="cart-page-divider"></div>
                             <div class="cart-page__content__header">
@@ -158,7 +158,7 @@ function total($params)
                             </div>
 
                             <div class="cart-page__content__header">
-                                <div>Thông tin người nhận</div>
+                                <div>Thông tin người nhận????</div>
                             </div>
                             <div class="cart-page-divider"></div>
                             <div class="cart-page__content__header">
@@ -168,25 +168,25 @@ function total($params)
                             </div>
                             <div class="cart-page__content__header">
                                 <input name="phone_number" type="text" class="form-control" id="delivery-address"
-                                    placeholder="Số điện thoại" value="<?php echo $params['user']->phone_number ?>">
+                                    placeholder="Phone number" value="<?php echo $params['user']->phone_number ?>">
                             </div>
                             <!-- <div class="cart-page__content__header">
                             <input type="text" class="form-control" id="delivery-note"
                                 placeholder="Ghi chú cho đơn hàng này">
                             </div> -->
                             <div class="cart-page__content__header">
-                                <div>Phương thức thanh toán</div>
+                                <div>Payment method</div>
                             </div>
                             <div class="cart-page-divider"></div>
 
-                            <div class="cart-page__content__header__checkbox">
+                            <!-- <div class="cart-page__content__header__checkbox">
                                 <input value="cash" class="form-check-input" type="radio" name="payment_method"
                                     id="flexRadioDefault1" checked>
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     <img class="image-payment" src="/images/payment/cash.jpeg">
                                     Thanh toán khi nhận hàng (tiền mặt)
                                 </label>
-                            </div>
+                            </div> -->
                             <div class="cart-page__content__header__checkbox">
                                 <input value="momo-pay" class="form-check-input" type="radio" name="payment_method"
                                     id="flexRadioDefault2">
@@ -216,7 +216,7 @@ function total($params)
                                     id="flexRadioDefault2">
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     <img class="image-payment" src="/images/payment/card.png">
-                                    Thẻ ngân hàng
+                                    Credit cart
                                 </label>
                             </div>
                             <div>
@@ -233,23 +233,23 @@ function total($params)
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <img src="/images/logo/logo-2.png" width="30px" class="rounded me-2" alt="logo-2">
-                <strong class="me-auto">Kaffee store</strong>
+                <strong class="me-auto">Filmware</strong>
                 <small>Bây giờ</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                Xóa sản phẩm thành công
+                Product removed!
             </div>
         </div>
         <div id="placeOrderToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <img src="/images/logo/logo-2.png" width="30px" class="rounded me-2" alt="logo-2">
-                <strong class="me-auto">Kaffee store</strong>
+                <strong class="me-auto">Filmware</strong>
                 <small>Bây giờ</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                Đặt đơn hàng thành công.
+                Order complete.
             </div>
         </div>
     </div>

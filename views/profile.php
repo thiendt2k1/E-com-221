@@ -11,7 +11,7 @@ if (Application::isGuest()) {
 $this->title = 'Profile';
 ?>
 
-<h1>Tài khoản của bạn</h1>
+<h1>Your account</h1>
 
 <div class="profile-avatar">
     <img class="profile-avatar-image" alt="profile-avatar-image" src='/images/avatar.png'>
@@ -28,7 +28,7 @@ $this->title = 'Profile';
 <?php echo $form->field($user, 'email') ?>
 <?php echo $form->field($user, 'phone_number') ?>
 <?php echo $form->field($user, 'address') ?>
-<button type="submit" class="btn btn-primary">Cập nhật</button>
+<button type="submit" class="btn btn-primary">Update</button>
 <?php app\core\form\Form::end() ?>
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
@@ -40,7 +40,7 @@ $this->title = 'Profile';
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
-            Cập nhật thông tin cá nhân thành công.
+            Profile update successfully.
         </div>
     </div>
 </div>

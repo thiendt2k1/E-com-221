@@ -52,7 +52,7 @@ class Category extends DBModel
     public function labels(): array
     {
         return [
-            'name' => 'Tên mục',
+            'name' => 'Labels',
         ];
     }
 

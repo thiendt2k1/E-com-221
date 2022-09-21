@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-center h-100">
         <div class="card">
             <div class="card-header">
-                <h3>Đăng nhập</h3>
+                <h3>Sign in</h3>
                 <div class="d-flex justify-content-end social_icon">
                     <span><i class="fab fa-facebook-square"></i></span>
                     <span><i class="fab fa-google-plus-square"></i></span>
@@ -17,15 +17,15 @@
                         <input type="checkbox">Nhớ tài khoản
                     </div> -->
                 <div class="form-group">
-                    <button type="submit" class="btn float-right login_btn">Đăng nhập</button>
+                    <button type="submit" class="btn float-right login_btn">Sign in</button>
                 </div>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-center links">
-                    Trở thành viên Kaffee store !<a href="/register">Đăng ký</a>
+                    Become a Filmware member !<a href="/register">Register</a>
                 </div>
                 <!-- <div class="d-flex justify-content-center">
-                        <a href="#">Quên mật khẩu ?</a>
+                        <a href="#">Forget Password ?</a>
                     </div> -->
             </div>
         </div>

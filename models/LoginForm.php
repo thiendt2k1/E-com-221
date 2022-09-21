@@ -21,8 +21,8 @@ class LoginForm extends Model
     public function labels()
     {
         return [
-            'email' => 'Địa chỉ email',
-            'password' => 'Mật khẩu'
+            'email' => 'Email address',
+            'password' => 'Password'
         ];
     }
 

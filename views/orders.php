@@ -14,13 +14,13 @@ function orderStatus($status)
     $statusStr = '';
     switch ($status) {
         case 'processing':
-            $statusStr = 'Đang xử lý';
+            $statusStr = 'Processing';
             break;
         case 'done':
-            $statusStr = 'Đã hoàn thành';
+            $statusStr = 'Done';
             break;
         case 'cancel':
-            $statusStr = 'Đã hủy';
+            $statusStr = 'Cancelled';
             break;
         default:
             break;
@@ -33,7 +33,7 @@ function orderStatus($status)
 <div class="order-page">
     <div class="menu__header">
         <img class="menu-image" src="/images/orders.png" alt="menu-image" />
-        <h3>Đơn hàng của bạn</h3>
+        <h3>Your Order</h3>
     </div>
     <div class="order-page__list">
         <div class="container">
@@ -43,13 +43,13 @@ function orderStatus($status)
                         Số thứ tự
                     </div>
                     <div class="col">
-                        Mã đơn hàng
+                        Product ID
                     </div>
                     <div class="col">
-                        Tình trạng đơn hàng
+                        Product status
                     </div>
                     <div class="col">
-                        Ngày đặt hàng
+                        Order date
                     </div>
                 </div>
             </div>

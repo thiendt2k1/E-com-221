@@ -38,17 +38,17 @@
             
             <div class="remember-me">
                 <input type="checkbox" required>
-                <span style="color: #000000">Tôi chấp nhận các điều khoản của dịch vụ</span>
+                <span style="color: #000000">I accept the Terms & Services</span>
             </div>
             <div class="btn">
-                <button type="submit" class="button">Đăng ký</button>
+                <button type="submit" class="button">Register</button>
             </div>
         <?php app\core\form\Form::end() ?>
     </div>
     <div class="card-footer">
         <div class="login">
-            Bạn đã có tài khoản chưa ?
-            <a href="/login"><button id="login-link">Đăng nhập</button></a>
+            Do you have an account ?
+            <a href="/login"><button id="login-link">Sign in</button></a>
         </div>
     </div>
 </div>
