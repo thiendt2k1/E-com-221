@@ -15,8 +15,9 @@ class m0002_importData
         $db->pdo->exec($sql);
 
 		$db = Application::$app->db;
-        $sql = "INSERT INTO ecom.users (id,firstname,lastname,email,phone_number,password,image_url,address,ward_id,district_id,province_id,role,created_at,updated_at) VALUES 
-            ('6191e42fe4e3f','admin','admin','admin@gmail.com','0924955363','" . password_hash('12345678', PASSWORD_DEFAULT) . "','','HCM City','','','','admin','2021-11-15 11:38:07','2021-11-15 11:38:07');";
+        $sql = "INSERT INTO ecom.users (id,firstname,lastname,email,phone_number,password,image_url,role,created_at,updated_at) VALUES 
+            ('6191e42fe4e3f','admin','admin','admin@gmail.com','0924955363','" . password_hash('12345678', PASSWORD_DEFAULT) . "','','admin','2021-11-15 11:38:07','2021-11-15 11:38:07'),
+			('123456789ed74','user','user','user@gmail.com','0924945687','" . password_hash('123456789', PASSWORD_DEFAULT) . "','','client','2021-11-15 11:38:07','2021-11-15 11:38:07');";
         $db->pdo->exec($sql);
 
         $db = Application::$app->db;

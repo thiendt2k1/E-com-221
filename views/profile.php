@@ -27,7 +27,6 @@ $this->title = 'Profile';
 </div>
 <?php echo $form->field($user, 'email') ?>
 <?php echo $form->field($user, 'phone_number') ?>
-<?php echo $form->field($user, 'address') ?>
 <button type="submit" class="btn btn-primary">Update</button>
 <?php app\core\form\Form::end() ?>
 

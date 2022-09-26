@@ -23,9 +23,6 @@
                 <?php echo $form->field($userModel, 'email') ?>
             </div>
             <div class="form-group col-md-4">
-              <?php echo $form->field($userModel, 'address') ?>
-            </div>
-            <div class="form-group col-md-4">
               <?php echo $form->field($userModel, 'role') ?>
             </div>
             <div class="form-group col-md-6">

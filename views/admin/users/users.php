@@ -38,7 +38,6 @@ $user = User::getUserInfo(Application::$app->user->id);
                 <td><?=$userModel->getEmail()?></td>
                 <td><?=$userModel->getPhoneNumer()?></td>
                 <td><?=$userModel->getRole()?></td>
-                <td><?=$userModel->getAddress()?></td>
                 <td>
                   <a class="fa fa-eye btn btn-info btn-sm" href="/admin/users/details?id=<?=$userModel->getId()?>"></a>
                   <a class="fa fa-pencil btn btn-warning btn-sm" href="/admin/users/edit?id=<?=$userModel->getId()?>"></a>

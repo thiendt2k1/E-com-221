@@ -27,12 +27,6 @@ use app\core\Application;
                     <dd><?= $params['orders']->getPaymentMethod() ?></dd>
                     <dt>Trạng thái</dt>
                     <dd><?= $params['orders']->getStatus() ?></dd>
-                    <dt>Người nhận</dt>
-                    <dd><?= $params['orders']->getDeliveryName() ?></dd>
-                    <dt>Địa chỉ giao hàng</dt>
-                    <dd><?= $params['orders']->getDeliveryAddress() ?></dd>
-                    <dt>Số điện thoại</dt>
-                    <dd><?= $params['orders']->getDeliveryPhone() ?></dd>
                     <dt>Ngày đặt hàng</dt>
                     <dd><?= $params['orders']->getDateTime() ?></dd>
                 </dl>

@@ -14,7 +14,6 @@ class User extends UserModel
     public string $email = '';
     public string $password = '';
     public string $passwordConfirm = '';
-    public string $address = '';
     public string $phone_number = '';
     public string $role = '';
 
@@ -25,8 +24,6 @@ class User extends UserModel
     public function getName() { return $this->getDisplayName(); }
     public function getEmail() { return $this->email; }
     public function getPhoneNumer() { return $this->phone_number; }
-    public function getAddress() { return $this->address; }
-
     public function load($params)
     {
         $this->id = $params[0];
@@ -35,7 +32,6 @@ class User extends UserModel
         $this->email = $params[3];
         $this->password = $params[4];
         $this->phone_number = $params[5];
-        $this->address = $params[6];
         $this->role = $params[7];
     }
 
@@ -46,7 +42,7 @@ class User extends UserModel
 
     public function attributes(): array
     {
-        return ['id', 'firstname', 'lastname', 'email', 'password', 'phone_number', 'address', 'role'];
+        return ['id', 'firstname', 'lastname', 'email', 'password', 'phone_number', 'role'];
     }
 
     public function labels(): array
@@ -58,7 +54,6 @@ class User extends UserModel
             'password' => 'Password',
             'passwordConfirm' => 'Re-type password',
             'phone_number' => 'Phone number',
-            'address' => 'Address',
             'role' => 'Role'
         ];
     }
@@ -111,7 +106,7 @@ class User extends UserModel
 
         foreach ($req->fetchAll() as $item) {
             $userModel = new User;
-            $params = array($item['id'], $item['firstname'], $item['lastname'], $item['email'], $item['password'], $item['phone_number'], $item['address'], $item['role']);
+            $params = array($item['id'], $item['firstname'], $item['lastname'], $item['email'], $item['password'], $item['phone_number'], $item['role']);
             $userModel->load($params);
             array_push($list, $userModel);
         }
@@ -129,7 +124,6 @@ class User extends UserModel
         $user->firstname = $item['firstname'];
         $user->lastname = $item['lastname'];
         $user->email = $item['email'];
-        $user->address = $item['address'];
         $user->phone_number = $item['phone_number'];
         $user->role = $item['role'];
         return $user;
@@ -143,7 +137,6 @@ class User extends UserModel
                 firstname = '" . $user->firstname . "', 
                 lastname = '" . $user->lastname . "',
                 phone_number = '" . $user->phone_number . "',
-                address = '" . $user->address . "'
             WHERE id = '" . $user->id . "';
             "
         );
@@ -162,7 +155,6 @@ class User extends UserModel
                 password = '" . password_hash($user->password, PASSWORD_DEFAULT) . "',
                 phone_number = '" . $user->phone_number . "',
                 role = '" . $user->role . "',
-                address = '" . $user->address . "'
             WHERE id = '" . $user->id . "';
             "
         );

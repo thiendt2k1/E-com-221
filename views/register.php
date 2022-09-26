@@ -22,11 +22,7 @@
                     <?php echo $form->field($model, 'phone_number') ?>
                 </div>
             </div> 
-            <div class="row">
-                <div class="col">
-                    <?php echo $form->field($model, 'address') ?>
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col">
                     <?php echo $form->field($model, 'password')->passwordField() ?>

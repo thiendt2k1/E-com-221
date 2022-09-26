@@ -15,7 +15,6 @@ abstract class UserModel extends DBModel
             'lastname' => [self::RULE_REQUIRED],
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
             'phone_number' => [self::RULE_REQUIRED, self::RULE_NUMBER, [self::RULE_MAX, 'max' => 10], [self::RULE_MIN, 'min' => 10]],
-            'address' => [self::RULE_REQUIRED],
         ];
 
         foreach ($updateRules as $attribute => $rules) {

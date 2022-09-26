@@ -5,7 +5,6 @@
     <?php echo $form->field($model, 'lastname') ?>
     <?php echo $form->field($model, 'email') ?>
     <?php echo $form->field($model, 'phone_number') ?>
-    <?php echo $form->field($model, 'address') ?>
     <?php echo $form->field($model, 'role') ?>    
     <?php echo $form->field($model, 'password')->passwordField() ?>
     <?php echo $form->field($model, 'passwordConfirm')->passwordField() ?>

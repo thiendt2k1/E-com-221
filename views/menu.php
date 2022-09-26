@@ -32,6 +32,7 @@
             </div>
             <h6>
                 All shows
+            </h6>
         </a>
         <a class="option" href="/menu?category_id=1">
             <div class="option-image-block">

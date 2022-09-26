@@ -149,32 +149,6 @@ function total($params)
                     <form accept-charset="utf-8" action="/cart" method="post">
                         <div class="cart-page__info">
                             <div class="cart-page__content__header">
-                                <div>Địa chỉ giao hàng?????</div>
-                            </div>
-                            <div class="cart-page-divider"></div>
-                            <div class="cart-page__content__header">
-                                <input name="address" type="text" class="form-control" id="delivery-address"
-                                    placeholder="Nhập đỉa chỉ nhận hàng" value="<?php echo $params['user']->address ?>">
-                            </div>
-
-                            <div class="cart-page__content__header">
-                                <div>Thông tin người nhận????</div>
-                            </div>
-                            <div class="cart-page-divider"></div>
-                            <div class="cart-page__content__header">
-                                <input name="name" type=" text" class="form-control" id="delivery-address"
-                                    placeholder="Tên người nhận"
-                                    value="<?php echo $params['user']->firstname . ' ' . $params['user']->lastname ?>">
-                            </div>
-                            <div class="cart-page__content__header">
-                                <input name="phone_number" type="text" class="form-control" id="delivery-address"
-                                    placeholder="Phone number" value="<?php echo $params['user']->phone_number ?>">
-                            </div>
-                            <!-- <div class="cart-page__content__header">
-                            <input type="text" class="form-control" id="delivery-note"
-                                placeholder="Ghi chú cho đơn hàng này">
-                            </div> -->
-                            <div class="cart-page__content__header">
                                 <div>Payment method</div>
                             </div>
                             <div class="cart-page-divider"></div>

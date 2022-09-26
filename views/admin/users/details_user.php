@@ -15,7 +15,6 @@
           <dt>Email</dt><dd><?= $params['userModel']->getEmail() ?></dd>
           <dt>Số điện thoại</dt><dd><?= $params['userModel']->getPhoneNumer() ?></dd>
           <dt>Vai trò</dt><dd><?= $params['userModel']->getRole() ?></dd>
-          <dt>Địa chỉ</dt><dd><?= $params['userModel']->getAddress() ?></dd>
         </dl>
       </div>
     </section>

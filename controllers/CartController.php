@@ -97,11 +97,8 @@ class CartController extends Controller
         $items = CartItem::getCartItem($cart_id);
 
         $user_id = Application::$app->user->id;
-        $delivery_name = Application::$app->request->getBody()['name'];
-        $delivery_phone = Application::$app->request->getBody()['phone_number'];
-        $delivery_address = Application::$app->request->getBody()['address'];
         $payment_method = Application::$app->request->getBody()['payment_method'];
-        $order = new Order(uniqid(), $user_id, $payment_method, 'processing', $delivery_name, $delivery_phone, $delivery_address);
+        $order = new Order(uniqid(), $user_id, $payment_method, 'processing');
         $order->save();
 
         foreach ($items as $item) {

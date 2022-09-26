@@ -129,29 +129,6 @@ function total($params)
                 <div class="col-md-12 col-lg-4">
                     <div class="cart-page__info">
                         <div class="cart-page__content__header">
-                            <div>Địa chỉ giao hàng????????</div>
-                        </div>
-                        <div class="cart-page-divider"></div>
-                        <div class="cart-page__content__header">
-                            <?php echo $params['order']->delivery_address ?>
-                        </div>
-
-                        <div class="cart-page__content__header">
-                            <div>Thông tin người nhận????????</div>
-                        </div>
-                        <div class="cart-page-divider"></div>
-                        <div class="cart-page__content__header">
-                            Tên người nhận:
-                            <?php echo $params['order']->delivery_name ?>
-                        </div>
-                        <div class="cart-page__content__header">
-                            Số điện thoại: <?php echo $params['order']->delivery_phone ?>
-                        </div>
-                        <!-- <div class="cart-page__content__header">
-                                <input type="text" class="form-control" id="delivery-note"
-                                    placeholder="Note">
-                            </div> -->
-                        <div class="cart-page__content__header">
                             <div>Payment method</div>
                         </div>
                         <div class="cart-page-divider"></div>

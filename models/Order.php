@@ -13,9 +13,6 @@ class Order extends DBModel
     public string $user_id = '';
     public string $payment_method = '';
     public string $status = '';
-    public string $delivery_name = '';
-    public string $delivery_phone = '';
-    public string $delivery_address = '';
     public string $created_at = '';
 
     public function __construct(
@@ -23,18 +20,12 @@ class Order extends DBModel
         $user_id,
         $payment_method,
         $status,
-        $delivery_name,
-        $delivery_phone,
-        $delivery_address,
         $created_at = ''
     ) {
         $this->id = $id;
         $this->user_id = $user_id;
         $this->payment_method = $payment_method;
         $this->status = $status;
-        $this->delivery_name = $delivery_name;
-        $this->delivery_phone = $delivery_phone;
-        $this->delivery_address = $delivery_address;
 
         if ($created_at != '') {
             $this->created_at = $created_at;
@@ -46,9 +37,6 @@ class Order extends DBModel
     public function getPaymentMethod() { return $this->payment_method; }
     public function getStatus() { return $this->status; }
     public function setStatus($status) { $this->status = $status; }
-    public function getDeliveryName() { return $this->delivery_name; }
-    public function getDeliveryAddress() { return $this->delivery_address; }
-    public function getDeliveryPhone() { return $this->delivery_phone; }
     public function getDateTime() { return $this->created_at; }
 
     public static function tableName(): string
@@ -63,9 +51,6 @@ class Order extends DBModel
             'user_id',
             'payment_method',
             'status',
-            'delivery_name',
-            'delivery_phone',
-            'delivery_address',
         ];
     }
 
@@ -77,9 +62,6 @@ class Order extends DBModel
                 'user_id' => 'User ID',
                 'payment_method' => 'Payment method',
                 'status' => 'Status',
-                'delivery_name' => 'Delivery name',
-                'delivery_phone' => 'Delivery phone',
-                'delivery_address' => 'Delivery address',
             ];
     }
 
@@ -88,9 +70,9 @@ class Order extends DBModel
         return [];
     }
 
-    public static function create($user_id, $payment_method, $delivery_name, $delivery_phone, $delivery_address)
+    public static function create($user_id, $payment_method)
     {
-        $order = new Order(uniqid(), $user_id, $payment_method, 'processing', $delivery_name, $delivery_phone, $delivery_address);
+        $order = new Order(uniqid(), $user_id, $payment_method, 'processing');
         $order->save();
     }
 
@@ -157,9 +139,6 @@ class Order extends DBModel
                 $item['user_id'],
                 $item['payment_method'],
                 $item['status'],
-                $item['delivery_name'],
-                $item['delivery_phone'],
-                $item['delivery_address'],
                 $item['created_at']
             );
         };
@@ -179,9 +158,6 @@ class Order extends DBModel
                 $item['user_id'],
                 $item['payment_method'],
                 $item['status'],
-                $item['delivery_name'],
-                $item['delivery_phone'],
-                $item['delivery_address'],
                 $item['created_at']
             );
         };
@@ -227,9 +203,6 @@ class Order extends DBModel
             $item['user_id'],
             $item['payment_method'],
             $item['status'],
-            $item['delivery_name'],
-            $item['delivery_phone'],
-            $item['delivery_address'],
             $item['created_at']
         );
         return $order;

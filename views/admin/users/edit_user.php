@@ -30,9 +30,6 @@
             <div class="form-group col-md-4">
               <?php echo $form->field($userModel, 'role') ?>
             </div>
-            <div class="form-group col-md-4">
-              <?php echo $form->field($userModel, 'address') ?>
-            </div>
             <div class="form-row">
                 <div class="col-md-4">
                 <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i>Lưu</button>

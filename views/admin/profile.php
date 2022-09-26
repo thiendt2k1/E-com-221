@@ -20,9 +20,6 @@
                         <?php echo $form->field($user, 'phone_number') ?><br>
                     </div>
                     <div class="col-md-12">
-                        <?php echo $form->field($user, 'address') ?><br>
-                    </div>
-                    <div class="col-md-12">
                         <?php echo $form->field($user, 'email') ?><br>
                     </div>
                     <div class="col-md-12">

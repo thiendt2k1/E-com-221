@@ -32,9 +32,6 @@ document.title = 'Đơn hàng đã huỷ';
                             <td><?= $orderModel->getUserId() ?></td>
                             <td><?= $orderModel->getPaymentMethod() ?></td>
                             <td><?= $orderModel->getStatus() ?></td>
-                            <td><?= $orderModel->getDeliveryName() ?></td>
-                            <td><?= $orderModel->getDeliveryAddress() ?></td>
-                            <td><?= $orderModel->getDeliveryPhone() ?></td>
                             <td><?= $orderModel->getDateTime() ?></td>
                             <td>
                                 <a class="fa fa-eye btn btn-info btn-sm"

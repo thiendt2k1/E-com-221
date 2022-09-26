@@ -23,6 +23,7 @@ class m0001_initial
             --
 
             CREATE TABLE `cart_detail` (
+            `order_detail_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `product_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `cart_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `quantity` int(11) NOT NULL,
@@ -59,10 +60,6 @@ class m0001_initial
             `phone_number` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `password` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `image_url` varchar(4000) COLLATE utf8mb4_vietnamese_ci NULL,
-            `address` varchar(100) COLLATE utf8mb4_vietnamese_ci NULL,
-            `ward_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NULL,
-            `district_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NULL,
-            `province_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NULL,
             `role` varchar(100) COLLATE utf8mb4_vietnamese_ci NULL,
             `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
             `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -108,9 +105,12 @@ class m0001_initial
             --
 
             CREATE TABLE `order_detail` (
+            `id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `product_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `order_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `quantity` int(11) NOT NULL,
+            `note` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+            `size` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
             `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
