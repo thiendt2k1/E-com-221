@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-image: linear-gradient(120deg, #670c7b 0%, #24afd9 100%);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -17,7 +17,7 @@
 }
 
 .nav-link {
-  color: black;
+  color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -35,6 +35,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100%;
+  background-color: #15151e;
+  color: white;
 }
 
 .container {
@@ -47,19 +49,19 @@
   border: none;
   border-radius: 20px;
   padding: 10px 20px !important;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .login__button:hover {
   text-decoration: none;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
 }
 
 .nav-link:hover {
-  color: black;
-  border-bottom: 2px solid black;
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 .navbar-toggler {
@@ -124,10 +126,11 @@
 }
 
 .info {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-image: linear-gradient(120deg, #670c7b 0%, #24afd9 100%);
 }
 
 .footer-info {
+  color: white;
   max-width: 1320px;
   display: flex;
   flex-direction: row;
@@ -156,6 +159,6 @@
 
 @media screen and (max-width:768px){
     .navbar-collapse {
-      background-image: linear-gradient( to right, #f6d365 0%, #fda085 100%);
+      background-image: linear-gradient( to right, #670c7b 0%, #24afd9 100%);
     }
 }

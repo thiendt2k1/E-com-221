@@ -17,13 +17,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="2000">
-                <img src="/images/slider/slider-1.jpg" class="d-block w-100" alt="...">
+                <img src="/images/slider/inception_movie_poster_banner.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/images/slider/slider-2.jpg" class="d-block w-100" alt="...">
+                <img src="/images/slider/The Avengers-Banner.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/images/slider/slider-3.jpg" class="d-block w-100" alt="...">
+                <img src="/images/slider/The-Finest-Hours-Banner.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -45,66 +45,38 @@
                     <div>
                         <img src="/images/home/home-1.png" />
                     </div>
-                    <h3>Tinh thần tối giản</h3>
+                    <h3>Home sweet home</h3>
                     <p>
-                        Kaffee store được thiết kế với phong cách chủ đạo mang tinh thần tối giản, thể hiện qua
-                        cách
-                        phân
-                        chia không gian tinh tế với sự tinh giản cả trong đường nét, cách bày trí lẫn nguyên vật
-                        liệu.<br><br>
-
-                        Sự gần gũi, sang trọng và tinh tế của Kaffee store được thể hiện với nhiều yếu tố. Việc sử dụng
-                        vật
-                        liệu
-                        chủ đạo là đá rửa cho tường, đá mài cho sàn nhà và sự kết hợp có tính toán tạo nên một thể thống
-                        nhất cho không gian. Bên cạnh đó, ánh sáng tự nhiên và cây xanh cũng được tận dụng góp phần tạo
-                        nên
-                        một không gian nghệ thuật kiến trúc.<br><br>
-
-                        Phong cách tối giản ngày càng thân thuộc hơn với cuộc sống năng động của người Việt Nam hiện
-                        nay.
-                        Chúng được sử dụng nhiều trong các thiết kế thời trang, kiến trúc và nay là một không gian
-                        thưởng
-                        thức cà phê.<br><br>
+                        Our site aime to provide the ultimate home theater experience for those who wants to enjoy 
+                        movies in the comfort of their own home, especially with friends and family.
+                        By using our service, film geek can watch all of their favourite shows without any extra fees
+                        from the cinema or disturbance from other movie watcher while still enjoy the optimal quality
+                        of the film as the director intended.<br><br>
                     </p>
                 </div>
                 <div class="col-md-12 col-lg-6 home-poster">
-                    <img class="home-image" src="/images/poster/poster-1.jpg" />
-                    <img class="home-image" src="/images/poster/poster-2.jpg" />
+                    <!-- <img class="home-image" src="/images/poster/poster-1.jpg" />
+                    <img class="home-image" src="/images/poster/poster-2.jpg" /> -->
+                    <img class="home-image" src="/images/poster/Home-Theater.jpg" />
                 </div>
             </div>
         </div>
         <div class="home-block">
             <div class="row gy-5">
                 <div class="col-md-12 col-lg-6 home-poster">
-                    <img class="home-image" src="/images/poster/poster-4.png" />
-                    <img class="home-image" src="/images/poster/poster-3.png" />
+                    <!-- <img class="home-image" src="/images/poster/poster-4.png" />
+                    <img class="home-image" src="/images/poster/poster-3.png" /> -->
+                    <img class="home-image" src="/images/poster/film-warehouse.jpg" />
+
                 </div>
                 <div class="col-md-12 col-lg-6">
                     <div>
                         <img src="/images/home/home-2.png" />
                     </div>
-                    <h3>Nguyên liệu nhập khẩu cao cấp</h3>
+                    <h3>Unlimited movies, TV shows, and more</h3>
                     <p>
-                        Kaffee store được thiết kế với phong cách chủ đạo mang tinh thần tối giản, thể hiện qua
-                        cách
-                        phân
-                        chia không gian tinh tế với sự tinh giản cả trong đường nét, cách bày trí lẫn nguyên vật
-                        liệu.<br><br>
-
-                        Sự gần gũi, sang trọng và tinh tế của Kaffee store được thể hiện với nhiều yếu tố. Việc sử dụng
-                        vật
-                        liệu
-                        chủ đạo là đá rửa cho tường, đá mài cho sàn nhà và sự kết hợp có tính toán tạo nên một thể thống
-                        nhất cho không gian. Bên cạnh đó, ánh sáng tự nhiên và cây xanh cũng được tận dụng góp phần tạo
-                        nên
-                        một không gian nghệ thuật kiến trúc.<br><br>
-
-                        Phong cách tối giản ngày càng thân thuộc hơn với cuộc sống năng động của người Việt Nam hiện
-                        nay.
-                        Chúng được sử dụng nhiều trong các thiết kế thời trang, kiến trúc và nay là một không gian
-                        thưởng
-                        thức cà phê.<br><br>
+                        We boast warehouse level of libraries for our users media consumption, everything from movies, TV shows, documentaries, etc.
+                        Containing shows from all of your favourite streaming services such as Netflix, Hulu, Disney+, HBO, etc.<br><br>
                     </p>
                 </div>
             </div>
@@ -115,32 +87,17 @@
                     <div>
                         <img src="/images/home/home-3.png" />
                     </div>
-                    <h3>Sản phẩm chính hãng </h3>
+                    <h3>Anywhere, anytime, anyplace </h3>
                     <p>
-                        Bộ sưu tập sản phẩm của Kaffee store xoay quanh các dòng sản phẩm gia dụng, được nhập khẩu chính
-                        hãng từ những thương hiệu danh tiếng của Nhật Bản, Vương Quốc Anh và New Zealand…<br><br>
-
-                        Thương hiệu KINTO (Nhật Bản) với các sản phẩm gia dụng được tạo nên từ nguyên liệu cao cấp dưới
-                        bàn tay của các thợ thủ công Nhật Bản cho ra những bình giữ nhiệt, bình nước, ly và dĩa
-                        sứ.<br><br>
-
-                        Thương hiệu MINOR FIGURES (Vương Quốc Anh) - Thức uống vị yến mạch (Oat milk)
-                        Kaffee store còn tạo nên sự khác biệt bằng việc nhập khẩu và phân phối chính hãng dòng sản phẩm
-                        thức
-                        uống vị yến mạch (Oat Milk) của thương hiệu Minor Figures (Vương Quốc Anh) phù hợp với người ăn
-                        chay và đưa hương vị cà phê lên một một tầm cao mới.<br><br>
-
-                        Thương hiệu J.Friends & Co. (New Zealand) – Mật ong Manuka
-                        Một trong những sản phẩm mới rất được ưu chuộng của Kaffee store là mật ong Manuka của thương
-                        hiệu
-                        J.Friends & Co. (New Zealand). Mật ong Manuka là loại mật ong thượng hạng được sản xuất đặc biệt
-                        ở Úc và New Zealand có độ kháng khuẩn (MGO) cao, có rất nhiều lợi ích cho sức khỏe như giảm đau
-                        họng, làm lành vết thương.<br><br>
+                        Download your purchased films and watch them on any device, anywhere and any time you want.
+                        With our service being subscription-free, even after your account is deleted or you unsubscribe
+                        your favourite shows are still available to enjoy.<br><br>
                     </p>
                 </div>
                 <div class="col-md-12 col-lg-6 home-poster">
-                    <img class="home-image" src="/images/poster/poster-5.png" />
-                    <img class="home-image" src="/images/poster/poster-6.png" />
+                    <!-- <img class="home-image" src="/images/poster/poster-5.png" />
+                    <img class="home-image" src="/images/poster/poster-6.png" /> -->
+                    <img class="home-image" src="/images/poster/download-film.jpg" />
                 </div>
             </div>
         </div>

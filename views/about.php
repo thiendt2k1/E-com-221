@@ -3,7 +3,7 @@
         <img class="page-banner" src="/images/page-banner.jpg" alt="page-banner" />
         <p style="text-align:center">
             <span style="font-size:25px">
-                <span style="color:#804000">
+                <span style="color:#4d4dff">
                     <br><strong>KAFFEE STORE</strong>
                 </span>
             </span>
@@ -13,7 +13,7 @@
     <div class="info-detail">
         <p style="text-align:justify">
             <span style="font-size:20px">
-                <span style="color:#804000">
+                <span style="color:#4d4dff">
                     <strong>Our Story</strong>
                 </span>
             </span>
@@ -34,7 +34,7 @@
         </p>
         <p style="text-align:justify">
             <span style="font-size:20px">
-                <span style="color:#804000">
+                <span style="color:#4d4dff">
                     <strong>Our Vision</strong>
                     <p><strong>1. </strong>With the ambition of being the largest online movies and films warehouse.
                         We aim to collect as much films and movies from your favourite streaming sites, movie studios and re-distribute them to you at a more significantly stable price.
@@ -50,7 +50,7 @@
 
         <p style="text-align:justify">
             <span style="font-size:20px">
-                <span style="color:#804000">
+                <span style="color:#4d4dff">
                     <strong>Our Mission</strong>
                     <p><strong>1. Become the Warehouse of the media world </strong>with the biggest online movies and shows database provider in the world.</p>
                     <p><strong>2. Set a new standard, </strong>by providing consistent and up-to-date metadata of a show for users ease of use.</p>
@@ -66,7 +66,7 @@
 
         <p style="text-align:justify">
             <span style="font-size:20px">
-                <span style="color:#804000">
+                <span style="color:#4d4dff">
                     <strong>Our Values</strong>
                 </span>
             </span>

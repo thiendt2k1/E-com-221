@@ -4,14 +4,14 @@
             <br><br>
             <p style="text-align:center">
                 <span style="font-size:25px">
-                    <span style="color:#804000">
+                    <span style="color:#4d4dff">
                         <strong>CONTACT US</strong>
                     </span>
                 </span>
             </p>
             <p style="text-align:center">
                 <span style="font-size:22px">
-                    <span style="color:#616161">
+                    <span style="color:#4d4dff">
                         <strong>FILMWARE</strong>
                     </span>
                 </span>

@@ -55,7 +55,7 @@
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    background-color: #f2f2f2;
+    background-color: #4d4dff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,7 +112,7 @@
 .item-button {
     width: 32px;
     height: 32px;
-    background-color: #fa8c16;
+    background-color: #4d4dff;
     border-radius: 32px;
     display: flex;
     justify-content: center;

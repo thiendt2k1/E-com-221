@@ -66,19 +66,19 @@ header("Content-type: text/html; charset=utf-8");
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Trang chủ <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/menu">Thực đơn</a>
+                        <a class="nav-link" href="/menu">Libraries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/stores">Cửa hàng</a>
+                        <a class="nav-link" href="/stores">Warehouse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">Về KAFFEE STORE</a>
+                        <a class="nav-link" href="/about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Liên hệ</a>
+                        <a class="nav-link" href="/contact">Contact</a>
                     </li>
                 </ul>
                 <?php
@@ -88,10 +88,10 @@ header("Content-type: text/html; charset=utf-8");
                 if (Application::isGuest() == 1) : ?>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="login__button nav-link" href="/login">Đăng nhập</a>
+                        <a class="login__button nav-link" href="/login">Sign in</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/register">Đăng ký</a>
+                        <a class="nav-link" href="/register">Register</a>
                     </li>
                 </ul>
                 <?php else : ?>
@@ -158,17 +158,17 @@ header("Content-type: text/html; charset=utf-8");
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-5 col-lg-4">
-                                            <h6>Thông tin website</h6>
+                                            <h6>Website info</h6>
                                             <ul>
-                                                <li><a href="/">Trang chủ</a></li>
-                                                <li><a href="/menu">Thực đơn</a></li>
-                                                <li><a href="/stores">Cửa hàng</a></li>
-                                                <li><a href="/about">Về chúng tôi</a></li>
-                                                <li><a href="/contact">Liên hệ</a></li>
+                                                <li><a href="/">Home</a></li>
+                                                <li><a href="/menu">Libraries</a></li>
+                                                <li><a href="/stores">Warehouse</a></li>
+                                                <li><a href="/about">About us</a></li>
+                                                <li><a href="/contact">Contact</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-md-5 col-lg-4">
-                                            <h6>Điều khoản sử dụng</h6>
+                                            <h6>Terms of Service</h6>
                                             <ul>
                                                 <li><a href="#">Quy chế website</a></li>
                                                 <li><a href="#">Bảo mật thông tin</a></li>
@@ -176,7 +176,7 @@ header("Content-type: text/html; charset=utf-8");
                                             </ul>
                                         </div>
                                         <div class="col-md-12 col-lg-4">
-                                            <h6>Liên hệ</h6>
+                                            <h6>Contact us</h6>
                                             <ul>
                                                 <li>Head Office 1: 86 - 88 Cao Thang, Ward 4, District 3, Ho Chi Minh,
                                                     Vietnam. Head Office 2: Floor 3 & 4 The Hub Building - 195/10E Dien

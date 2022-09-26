@@ -1,6 +1,6 @@
 <div class="menu">
     <div class="menu__header">
-        <img class="menu-image" src="/images/menu.png" alt="menu-image" />
+        <img class="menu-image" src="/images/movies.png" alt="menu-image" />
         <h3>Our Movies</h3>
     </div>
 
@@ -11,12 +11,12 @@
                     <div class="col-md-9 col-lg-10">
                         <div class="form-floating mb-3">
                             <input type="text" name="keyword" class="form-control" id="floatingInput"
-                                placeholder="Tìm kiếm theo tên sản phẩm bạn quan tâm" aria-describedby="button-addon1">
+                                placeholder="Look for your favourite shows" aria-describedby="button-addon1">
                             <label for="floatingInput">Look for your favourite shows</label>
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-2">
-                        <button class="btn btn-outline-secondary search-button" type="submit"
+                        <button class="btn btn-outline-secondary search-button" type="submit" style="color: white;"
                             id="button-addon1">Search</button>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
     <div class="menu__options">
         <a class="option" href="/menu">
             <div class="option-image-block">
-                <img src="/images/grid.png" alt="coffee-cup" class="option-image" />
+                <img src="/images/grid.png" alt="All shows" class="option-image" />
             </div>
             <h6>
                 All shows
@@ -36,7 +36,7 @@
         </a>
         <a class="option" href="/menu?category_id=1">
             <div class="option-image-block">
-                <img src="/images/coffee-cup.png" alt="coffee-cup" class="option-image" />
+                <img src="/images/movie-theater-icon.svg" alt="Movies" class="option-image" />
             </div>
             <h6>
                 Movies
@@ -44,7 +44,7 @@
         </a>
         <a class="option" href="/menu?category_id=5">
             <div class="option-image-block">
-                <img src="/images/milk-tea.png" alt="coffee-cup" class="option-image" />
+                <img src="/images/film-icon.png" alt="TV show" class="option-image" />
             </div>
             <h6>
                 TV show
@@ -52,7 +52,7 @@
         </a>
         <a class="option" href="/menu?category_id=2">
             <div class="option-image-block">
-                <img src="/images/milkshake.png" alt="coffee-cup" class="option-image" />
+                <img src="/images/liveaction-icon.svg" alt="Live action" class="option-image" />
             </div>
             <h6>
                 Live action
@@ -60,7 +60,7 @@
         </a>
         <a class="option" href="/menu?category_id=18">
             <div class="option-image-block">
-                <img src="/images/coffee.png" alt=" coffee-cup" class="option-image" />
+                <img src="/images/animated-icon.jpg" alt=" Animated" class="option-image" />
             </div>
             <h6>
                 Animated
@@ -68,7 +68,7 @@
         </a>
         <a class="option" href="/menu?category_id=20">
             <div class="option-image-block">
-                <img src="/images/glass.png" alt="coffee-cup" class="option-image" />
+                <img src="/images/movies.png" alt="Other" class="option-image" />
             </div>
             <h6>
                 Other
@@ -89,7 +89,7 @@
                 <?php
                 foreach ($params['products'] as $param) {
                     echo '
-                        <div class="col-xl-2 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-xl-3 col-md-6 col-sm-12 col-xs-6">
                             <a href="/product?id=' . $param->id . '">
                                 <div class="item-card">
                                     <img src="' . $param->image_url . '" alt=""
