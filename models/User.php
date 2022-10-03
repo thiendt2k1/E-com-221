@@ -32,7 +32,7 @@ class User extends UserModel
         $this->email = $params[3];
         $this->password = $params[4];
         $this->phone_number = $params[5];
-        $this->role = $params[7];
+        $this->role = $params[6];
     }
 
     public static function tableName(): string

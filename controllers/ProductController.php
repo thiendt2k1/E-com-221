@@ -11,6 +11,7 @@ use app\core\Application;
 use app\core\Request;
 use app\models\Cart;
 use app\models\CartDetail;
+use app\models\Category;
 use app\models\Record;
 
 class ProductController extends Controller
@@ -65,18 +66,19 @@ class ProductController extends Controller
 
     public function update(Request $request)
     {
+        $id = Application::$app->request->getParam('id');
+        $productModel = Product::getProductDetail($id);
+        $categoryModel = Category::get($productModel->getCategoryId());
+
         if ($request->getMethod() === 'post') {
-            $id = Application::$app->request->getParam('id');
-            $productModel = Product::getProductDetail($id);
             $productModel->loadData($request->getBody());
             $productModel->update($productModel);
             Application::$app->response->redirect('/admin/products');
         } else if ($request->getMethod() === 'get') {
-            $id = Application::$app->request->getParam('id');
-            $productModel = Product::getProductDetail($id);
-            $this->setLayout('admin');
+            $this->setLayout('admin');    
             return $this->render('/admin/products/edit_product', [
-                'productModel' => $productModel
+                'productModel' => $productModel,
+                'categoryModel' => $categoryModel,
             ]);
         }
     }
