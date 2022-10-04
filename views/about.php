@@ -4,7 +4,7 @@
         <p style="text-align:center">
             <span style="font-size:25px">
                 <span style="color:#4d4dff">
-                    <br><strong>KAFFEE STORE</strong>
+                    <br><strong>FILMWARE</strong>
                 </span>
             </span>
         </p>

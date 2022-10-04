@@ -23,7 +23,12 @@
                 <?php echo $form->field($userModel, 'email') ?>
             </div>
             <div class="form-group col-md-4">
-              <?php echo $form->field($userModel, 'role') ?>
+              <!-- <?php echo $form->field($userModel, 'role') ?> -->
+              <label class="form-label">Role</label>
+              <select name="role" class="form-control">
+                <option value="admin" selected>Admin</option>
+                <option value="client">Client</option>
+              </select>
             </div>
             <div class="form-group col-md-6">
               <?php echo $form->field($userModel, 'password')->passwordField()?>

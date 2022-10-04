@@ -136,7 +136,7 @@ class User extends UserModel
             SET 
                 firstname = '" . $user->firstname . "', 
                 lastname = '" . $user->lastname . "',
-                phone_number = '" . $user->phone_number . "',
+                phone_number = '" . $user->phone_number . "'
             WHERE id = '" . $user->id . "';
             "
         );
@@ -154,7 +154,7 @@ class User extends UserModel
                 email = '" . $user->email . "',
                 password = '" . password_hash($user->password, PASSWORD_DEFAULT) . "',
                 phone_number = '" . $user->phone_number . "',
-                role = '" . $user->role . "',
+                role = '" . $user->role . "'
             WHERE id = '" . $user->id . "';
             "
         );

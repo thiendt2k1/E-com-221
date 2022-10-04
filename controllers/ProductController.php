@@ -32,6 +32,7 @@ class ProductController extends Controller
     public function create(Request $request)
     {
         $productModel = new Product();
+        $categories = Category::getAllCategories();
         if ($request->getMethod() === 'post') {
             $productModel->loadData($request->getBody());
             $productModel->save();
@@ -40,7 +41,8 @@ class ProductController extends Controller
             $products = Product::getAllProducts();
             $this->setLayout('admin');
             return $this->render('/admin/products/create_product', [
-                'productModel' => $products
+                'productModel' => $products,
+                'categories' => $categories,
             ]);
         }
     }
@@ -69,7 +71,7 @@ class ProductController extends Controller
         $id = Application::$app->request->getParam('id');
         $productModel = Product::getProductDetail($id);
         $categoryModel = Category::get($productModel->getCategoryId());
-
+        $categories = Category::getAllCategories();
         if ($request->getMethod() === 'post') {
             $productModel->loadData($request->getBody());
             $productModel->update($productModel);
@@ -79,6 +81,7 @@ class ProductController extends Controller
             return $this->render('/admin/products/edit_product', [
                 'productModel' => $productModel,
                 'categoryModel' => $categoryModel,
+                'categories' => $categories,
             ]);
         }
     }

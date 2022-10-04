@@ -58,7 +58,7 @@ function orderStatus($status)
             foreach ($params['orders'] as $param) {
                 $count += 1;
                 echo '<div class="order-page__item">
-                <a href="/order?id=' . $param->id . '">
+                <a style="color:white" href="/order?id=' . $param->id . '">
                     <div class="row">
                         <div class="col">
                             ' . $count . '

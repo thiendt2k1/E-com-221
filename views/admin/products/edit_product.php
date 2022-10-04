@@ -12,10 +12,21 @@
         <?php $form = app\core\Form\Form::begin('', "post") ?>
           <div class="form-row">
             <div class="form-group col-md-3">
-              <?php echo $form->field($productModel, 'id') ?>
+              <?php echo $form->field($productModel, 'name') ?>
             </div>
             <div class="form-group col-md-3">
-            <?php echo $form->field($productModel, 'category_id') ?>
+              <div class="mb-3">
+                <label class="form-label">Category</label>
+                <select name='category_id' class="form-control">
+                  <?php
+                  foreach ($categories as $category) { 
+                  ?>
+                    <option <?php if ($categoryModel->getId() == $category->getId()) echo "selected=\"selected\"";  ?> value=<?=$category->getId()?> ><?=$category->getName()?></option>
+                  <?php 
+                  }
+                  ?>
+                </select>
+              </div>
             </div>
             <div class="form-group col-md-3">
               <?php echo $form->field($productModel, 'price') ?>

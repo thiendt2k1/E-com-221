@@ -23,7 +23,10 @@
                         <?php echo $form->field($user, 'email') ?><br>
                     </div>
                     <div class="col-md-12">
-                        <?php echo $form->field($user, 'role') ?><br>
+                        <select name="role" class="form-control">
+                            <option <?php if ($user->getRole() == "admin") echo "selected=\"selected\"";  ?> value="admin">Admin</option>
+                            <option <?php if ($user->getRole() == "client") echo "selected=\"selected\"";  ?> value="client">Client</option>
+                        </select>
                     </div>
                 </div><br><br>
                 <div class="mt-5 text-center">
