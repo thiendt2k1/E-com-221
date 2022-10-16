@@ -95,7 +95,7 @@
                                     <img src="' . $param->image_url . '" alt=""
                                         class="item-image" />
                                     <div class="item-info">
-                                        <p class="item-name">' . $param->name . '</p>
+                                        <p class="item-name">' . $param->name .' ('.$param->year.')</p>
                                         <div class="item-footer">
                                             <!-- <p>' . number_format($param->price, 0, ',', '.') . 'đ</p>-->
                                             <p></p>
