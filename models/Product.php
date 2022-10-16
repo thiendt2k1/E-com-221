@@ -14,6 +14,13 @@ class Product extends DBModel
     public float $price;
     public string $description;
     public string $image_url;
+    public int $year;
+    public int $duration;
+    public string $director;
+    public string $stars;
+    public float $rating;
+
+
 
     public function __construct(
         $id = '',
@@ -21,7 +28,12 @@ class Product extends DBModel
         $name = '',
         $price = 0,
         $description = '',
-        $image_url = ''
+        $image_url = '',
+        $year = 0,
+        $duration = 0,
+        $director = '',
+        $stars = '',
+        $rating = 0,
     ) {
         $this->id = $id;
         $this->category_id = $category_id;
@@ -29,6 +41,12 @@ class Product extends DBModel
         $this->price = $price;
         $this->description = $description;
         $this->image_url = $image_url;
+        $this->year = $year;
+        $this->duration = $duration;
+        $this->director = $director;
+        $this->stars = $stars;
+        $this->rating = $rating;
+
     }
 
     public function setId($id) { $this->id = $id; }
@@ -50,6 +68,20 @@ class Product extends DBModel
     public function setImageUrl($image_url) { $this->image_url = $image_url; }
     public function getImageUrl() { return $this->image_url; } 
 
+    public function setYear($year) { $this->year = $year; }
+    public function getYear() { return $this->year; } 
+
+    public function setDuration($duration) { $this->duration = $duration; }
+    public function getDuration() { return $this->duration; } 
+
+    public function setDirector($director) { $this->director = $director; }
+    public function getDirector() { return $this->director; } 
+
+    public function setStars($stars) { $this->stars = $stars; }
+    public function getStars() { return $this->stars; } 
+
+    public function setRating($rating) { $this->rating = $rating; }
+    public function getRating() { return $this->rating; } 
     public static function getNameById($id) 
     {
         $productModel = Product::getProductDetail($id);
@@ -64,7 +96,8 @@ class Product extends DBModel
     
     public function getDisplayInfo(): string
     {
-        return $this->id . ' ' . $this->category_id . ' ' . $this->name . ' ' . $this->price . ' ' . $this->description;
+        return $this->id . ' ' . $this->category_id . ' ' . $this->name . ' ' . $this->price . ' ' . $this->description
+         . ' ' . $this->year . ' ' . $this->duration . ' ' . $this->director . ' ' . $this->starts . ' ' . $this->rating;
     }
 
     public static function tableName(): string
@@ -74,7 +107,7 @@ class Product extends DBModel
 
     public function attributes(): array
     {
-        return ['id', 'category_id', 'name', 'price', 'description', 'image_url'];
+        return ['id', 'category_id', 'name', 'price', 'description', 'image_url', 'year', 'duration', 'director', 'stars', 'rating'];
     }
    
     public function labels(): array
@@ -85,7 +118,12 @@ class Product extends DBModel
             'price' => 'Price',
             'description' => 'Description',
             'image_url' => 'Product image',
-            'category_id' => 'Category ID'
+            'category_id' => 'Category ID',
+            'year' => 'Year',
+            'duration' => 'Duration',
+            'director' => 'Director',
+            'stars' => 'Stars',
+            'rating' => 'Rating',
         ];
     }
     
@@ -114,7 +152,12 @@ class Product extends DBModel
         $sql = "UPDATE products SET category_id='" . $product->category_id . "',
                                     name='" . $product->name . "', 
                                     price='" . $product->price . "', 
-                                    description='" . $product->description . "' 
+                                    description='" . $product->description . "' ,
+                                    year='" . $product->year . "' ,
+                                    duration='" . $product->duration . "' ,
+                                    director='" . $product->director . "' ,
+                                    stars='" . $product->stars . "' ,
+                                    rating='" . $product->rating . "' 
                                     WHERE id='" . $product->id . "'";
         $statement = self::prepare($sql);
         $statement->execute();
@@ -138,7 +181,7 @@ class Product extends DBModel
         $req = $db->query('SELECT * FROM products');
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
         }
 
         return $list;
@@ -149,7 +192,7 @@ class Product extends DBModel
         $db = Database::getInstance();
         $req = $db->query('SELECT * FROM products WHERE id = "' . $id . '"');
         $item = $req->fetchAll()[0];
-        $product = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url']);
+        $product = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
         return $product;
     }
 
@@ -160,7 +203,7 @@ class Product extends DBModel
         $req = $db->query('SELECT * FROM products WHERE category_id = "' . $category_id . '"');
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
         }
         return $list;
     }
@@ -172,7 +215,7 @@ class Product extends DBModel
         $req = $db->query("SELECT * FROM products WHERE name LIKE '%" . $keyword . "%';");
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
         }
         return $list;
     }

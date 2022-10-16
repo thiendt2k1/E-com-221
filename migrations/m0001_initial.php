@@ -128,6 +128,11 @@ class m0001_initial
             `image_url` varchar(1000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `price` int(12) NOT NULL,
             `description` varchar(4000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+            `year` int(11),
+            `duration` int(11),
+            `director` varchar(4000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+            `stars` varchar(4000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+            `rating` int(12),
             `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
             `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
