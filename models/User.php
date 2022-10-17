@@ -21,7 +21,7 @@ class User extends UserModel
 
     public function getId() { return $this->id; }
     public function getMovieIds() { return $this->movie_ids; }
-    public function setMovieIds($movie_ids) { return $this->$movie_ids = $movie_ids; }
+    public function setMovieIds($movie_ids) {$this->$movie_ids = implode(",",$movie_ids); }
     public function getRole() { return $this->role; }
     public function setRole($role) { $this->role = $role; }
     public function getName() { return $this->getDisplayName(); }
@@ -37,7 +37,7 @@ class User extends UserModel
         $this->phone_number = $params[5];
         $this->role = $params[6];
 
-        $this->$movie_ids = explode(',', $params[6]);
+        $this->$movie_ids = explode(',', $params[7]);
     }
 
     public static function tableName(): string
@@ -112,7 +112,7 @@ class User extends UserModel
 
         foreach ($req->fetchAll() as $item) {
             $userModel = new User;
-            $params = array($item['id'], $item['firstname'], $item['lastname'], $item['email'], $item['password'], $item['phone_number'], $item['role']);
+            $params = array($item['id'], $item['firstname'], $item['lastname'], $item['email'], $item['password'], $item['phone_number'], $item['role'], $item['movie_ids']);
             $userModel->load($params);
             array_push($list, $userModel);
         }

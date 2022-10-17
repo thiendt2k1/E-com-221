@@ -61,7 +61,7 @@ class m0001_initial
             `password` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `image_url` varchar(4000) COLLATE utf8mb4_vietnamese_ci NULL,
             `role` varchar(100) COLLATE utf8mb4_vietnamese_ci NULL,
-            `movie_ids` varchar(4000) COLLATE utf8mb4_vietnamese_ci NULL,
+            `movie_ids` varchar(4000) COLLATE utf8mb4_vietnamese_ci NULL DEFAULT '',
             `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
             `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
