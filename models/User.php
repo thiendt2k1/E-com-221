@@ -16,13 +16,11 @@ class User extends UserModel
     public string $passwordConfirm = '';
     public string $phone_number = '';
     public string $role = '';
-    public array $movie_ids = [];
+    public string $movie_ids = '';
 
 
     public function getId() { return $this->id; }
-    public function getMovieIds() { return $this->movie_ids; }
-    public function setMovieIds($movie_ids) {$this->$movie_ids = implode(",",$movie_ids); }
-    public function getRole() { return $this->role; }
+    public function getMovieIds() { return explode(',',$this->movie_ids); }    public function getRole() { return $this->role; }
     public function setRole($role) { $this->role = $role; }
     public function getName() { return $this->getDisplayName(); }
     public function getEmail() { return $this->email; }
@@ -37,7 +35,7 @@ class User extends UserModel
         $this->phone_number = $params[5];
         $this->role = $params[6];
 
-        $this->$movie_ids = explode(',', $params[7]);
+        $this->$movie_ids = implode(',', $params[7]);
     }
 
     public static function tableName(): string
@@ -170,12 +168,11 @@ class User extends UserModel
 
     public function update_movie($movie_id)
     {
-        array_push($this->movie_ids, $movie_id);
-        $aray_string = implode(",",$arr);
+        $this->movie_ids .= "," . $movie_id; 
         $statement = self::prepare(
             "UPDATE users 
             SET 
-                movie_ids = '" . $aray_string . "'
+                movie_ids = '" . $user->movie_ids . "'
             WHERE id = '" . $user->id . "';
             "
         );
