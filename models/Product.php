@@ -14,6 +14,7 @@ class Product extends DBModel
     public float $price;
     public string $description;
     public string $image_url;
+    public string $download_url;
     public int $year;
     public int $duration;
     public string $director;
@@ -29,6 +30,7 @@ class Product extends DBModel
         $price = 0,
         $description = '',
         $image_url = '',
+        $download_url = '',
         $year = 0,
         $duration = 0,
         $director = '',
@@ -41,6 +43,7 @@ class Product extends DBModel
         $this->price = $price;
         $this->description = $description;
         $this->image_url = $image_url;
+        $this->download_url = $download_url;
         $this->year = $year;
         $this->duration = $duration;
         $this->director = $director;
@@ -67,6 +70,9 @@ class Product extends DBModel
 
     public function setImageUrl($image_url) { $this->image_url = $image_url; }
     public function getImageUrl() { return $this->image_url; } 
+
+    public function setDownloadUrl($download_url) { $this->download_url = $download_url; }
+    public function getDownloadUrl() { return $this->download_url; } 
 
     public function setYear($year) { $this->year = $year; }
     public function getYear() { return $this->year; } 
@@ -107,7 +113,7 @@ class Product extends DBModel
 
     public function attributes(): array
     {
-        return ['id', 'category_id', 'name', 'price', 'description', 'image_url', 'year', 'duration', 'director', 'stars', 'rating'];
+        return ['id', 'category_id', 'name', 'price', 'description', 'image_url', 'download_url', 'year', 'duration', 'director', 'stars', 'rating'];
     }
    
     public function labels(): array
@@ -118,6 +124,7 @@ class Product extends DBModel
             'price' => 'Price',
             'description' => 'Description',
             'image_url' => 'Product image',
+            'download_url' => 'Download product',
             'category_id' => 'Category ID',
             'year' => 'Year',
             'duration' => 'Duration',
@@ -181,7 +188,7 @@ class Product extends DBModel
         $req = $db->query('SELECT * FROM products');
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
         }
 
         return $list;
@@ -192,7 +199,7 @@ class Product extends DBModel
         $db = Database::getInstance();
         $req = $db->query('SELECT * FROM products WHERE id = "' . $id . '"');
         $item = $req->fetchAll()[0];
-        $product = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
+        $product = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
         return $product;
     }
 
@@ -203,7 +210,7 @@ class Product extends DBModel
         $req = $db->query('SELECT * FROM products WHERE category_id = "' . $category_id . '"');
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
         }
         return $list;
     }
@@ -215,7 +222,7 @@ class Product extends DBModel
         $req = $db->query("SELECT * FROM products WHERE name LIKE '%" . $keyword . "%';");
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
         }
         return $list;
     }

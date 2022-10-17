@@ -126,6 +126,7 @@ class m0001_initial
             `category_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `image_url` varchar(1000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+            `download_url` varchar(1000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `price` int(12) NOT NULL,
             `description` varchar(4000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `year` int(11),
