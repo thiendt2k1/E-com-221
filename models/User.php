@@ -16,9 +16,12 @@ class User extends UserModel
     public string $passwordConfirm = '';
     public string $phone_number = '';
     public string $role = '';
+    public array $movie_ids = [];
 
 
     public function getId() { return $this->id; }
+    public function getMovieIds() { return $this->movie_ids; }
+    public function setMovieIds($movie_ids) { return $this->$movie_ids = $movie_ids; }
     public function getRole() { return $this->role; }
     public function setRole($role) { $this->role = $role; }
     public function getName() { return $this->getDisplayName(); }
@@ -33,6 +36,8 @@ class User extends UserModel
         $this->password = $params[4];
         $this->phone_number = $params[5];
         $this->role = $params[6];
+
+        $this->$movie_ids = explode(',', $params[6]);
     }
 
     public static function tableName(): string
@@ -42,7 +47,7 @@ class User extends UserModel
 
     public function attributes(): array
     {
-        return ['id', 'firstname', 'lastname', 'email', 'password', 'phone_number', 'role'];
+        return ['id', 'firstname', 'lastname', 'email', 'password', 'phone_number', 'role', 'movie_ids'];
     }
 
     public function labels(): array
@@ -54,7 +59,8 @@ class User extends UserModel
             'password' => 'Password',
             'passwordConfirm' => 'Re-type password',
             'phone_number' => 'Phone number',
-            'role' => 'Role'
+            'role' => 'Role',
+            'movie_ids' => 'Owned Movies',
         ];
     }
 
@@ -162,6 +168,20 @@ class User extends UserModel
         return true;
     }
 
+    public function update_movie($movie_id)
+    {
+        array_push($this->movie_ids, $movie_id);
+        $aray_string = implode(",",$arr);
+        $statement = self::prepare(
+            "UPDATE users 
+            SET 
+                movie_ids = '" . $aray_string . "'
+            WHERE id = '" . $user->id . "';
+            "
+        );
+        $statement->execute();
+        return true;
+    }
     public function delete()
     {
         $tablename = $this->tableName();
