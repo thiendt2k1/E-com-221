@@ -108,17 +108,11 @@ class ProductController extends Controller
         $addToCart = false;
 
         if ($request->getMethod() === 'post') {
-            $size = $request->getBody()['size'];
-            $note = $request->getBody()['note'];
-            $quantity = $request->getBody()['quantity'];
             $cart_id = Application::$app->cart->id;
             $cartDetail = new CartDetail(
                 uniqid(),
                 $product_id,
                 $cart_id,
-                $quantity,
-                $note,
-                $size
             );
             $cartDetail->save();
 
