@@ -1,5 +1,5 @@
 <script type="text/javascript">
-document.title = 'Chi đơn hàng';
+document.title = 'Order Details';
 </script>
 <?php
 
@@ -9,25 +9,25 @@ use app\core\Application;
     <div class="col-lg-6">
         <section class="panel">
             <header class="panel-heading">
-                <h1>Thông tin chi tiết đơn hàng</h1>
+                <h1>Order Details</h1>
                 <?php
         $path = Application::$app->request->getPath();
         if (strpos($path, 'reject')) {
-          echo '<a href="/admin/orders/rejected">Trở về</a>';
-        } else echo '<a href="/admin/orders/accepted">Trở về</a>';
+          echo '<a href="/admin/orders/rejected">Back</a>';
+        } else echo '<a href="/admin/orders/accepted">Back</a>';
         ?>
             </header>
             <div class="panel-body">
                 <dl class="dl-horizontal">
-                    <dt>Mã đơn hàng</dt>
+                    <dt>OrderID</dt>
                     <dd><?= $params['orders']->getId() ?></dd>
-                    <dt>Mã khách hàng</dt>
+                    <dt>UserID</dt>
                     <dd><?= $params['orders']->getUserId() ?></dd>
-                    <dt>Thanh toán</dt>
+                    <dt>Payment Method</dt>
                     <dd><?= $params['orders']->getPaymentMethod() ?></dd>
-                    <dt>Trạng thái</dt>
+                    <dt>Status</dt>
                     <dd><?= $params['orders']->getStatus() ?></dd>
-                    <dt>Ngày đặt hàng</dt>
+                    <dt>Date</dt>
                     <dd><?= $params['orders']->getDateTime() ?></dd>
                 </dl>
             </div>

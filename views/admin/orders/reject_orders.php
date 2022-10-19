@@ -1,26 +1,23 @@
 <script type="text/javascript">
-document.title = 'Đơn hàng đã huỷ';
+document.title = 'Canceled orders';
 </script>
 <div class="row">
     <div class="col-lg-12">
         <section class="panel">
             <header class="panel-heading">
-                <h1>Đơn hàng đã huỷ</h1>
-                <a href="/admin/orders">Trở về</a>
+                <h1>Canceled orders</h1>
+                <a href="/admin/orders">Back</a>
             </header>
             <div class="panel-body">
                 <table class="table table-striped table-hover dt-datatable">
                     <thead>
                         <tr>
-                            <th>Mã đơn hàng</th>
-                            <th>Mã khách hàng</th>
-                            <th>Thanh toán</th>
-                            <th>Trạng thái</th>
-                            <th>Người nhận</th>
-                            <th>Địa chỉ giao hàng</th>
-                            <th>Số điện thoại</th>
-                            <th>Ngày đặt hàng</th>
-                            <th class="no-sort">Tuỳ chọn</th>
+                            <th>OrderID</th>
+                            <th>UserId</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th class="no-sort">Options</th>
                         </tr>
                     </thead>
                     <tbody>

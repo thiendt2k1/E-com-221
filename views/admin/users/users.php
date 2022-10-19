@@ -6,26 +6,25 @@ use app\models\User;
 $user = User::getUserInfo(Application::$app->user->id);
 ?>
 <script type="text/javascript">
-  document.title = 'Quản lý người dùng';
+  document.title = 'User Management';
 </script> 
 <div class="row">
   <div class="col-lg-12">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Quản lý người dùng</h1>
-        <a href="/admin/users/create" class="btn btn-success">Thêm người dùng</a>
+        <h1> User Management</h1>
+        <a href="/admin/users/create" class="btn btn-success">Add user</a>
       </header>
       <div class="panel-body">
         <table class="table table-striped table-hover dt-datatable">
           <thead>
             <tr>
-              <th>Mã người dùng</th>
-              <th>Tên</th>
+              <th>UserID</th>
+              <th>Name</th>
               <th>Email</th>
-              <th>Số điện thoại</th>
-              <th>Vai trò</th>
-              <th>Địa chỉ</th>
-              <th class="no-sort"></th>
+              <th>Phone No.</th>
+              <th>Role</th>
+              <th class="no-sort">Options</th>
             </tr>
           </thead>
           <tbody>

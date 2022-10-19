@@ -15,7 +15,7 @@
           </div>
           <div class="col-7 d-flex align-items-center">
             <div class="numbers">
-              <p class="card-category">Thành viên</p>
+              <p class="card-category">Member</p>
               <?php
                   $count = 0;
                   foreach($params['users'] as $user) {
@@ -40,7 +40,7 @@
           </div>
           <div class="col-7 d-flex align-items-center">
             <div class="numbers">
-              <p class="card-category">Doanh thu</p>
+              <p class="card-category">Revenue</p>
               <?php
                   echo '<h4 class="card-title"> ' . $params['list'][0] . ' VNĐ' .' </h4>';
               ?>
@@ -61,7 +61,7 @@
           </div>
           <div class="col-7 d-flex align-items-center">
             <div class="numbers">
-              <p class="card-category">Sản phẩm</p>
+              <p class="card-category">Products</p>
                   <?php
                     $count = 0;
                     foreach($params['products'] as $product) {
@@ -86,7 +86,7 @@
           </div>
           <div class="col-7 d-flex align-items-center">
             <div class="numbers">
-              <p class="card-category">Đã bán</p>
+              <p class="card-category">Sold</p>
                 <?php
                     echo '<h4 class="card-title"> ' . $params['list'][1] .' </h4>';
                 ?>
