@@ -51,37 +51,37 @@ if($userModel->getRole() != 'admin') {
         </li>
           <li>
             <a href="/admin"?>
-              <i class="fas fa-home" aria-hidden="true"></i> &nbsp;Trang chính
+              <i class="fas fa-home" aria-hidden="true"></i> &nbsp;Main page
             </a>
           </li>
           <li>
             <a href="/admin/products"?>
-              <i class="fab fa-product-hunt" aria-hidden="true"></i> &nbsp;Quản lý sản phẩm
+              <i class="fab fa-product-hunt" aria-hidden="true"></i> &nbsp;Product Management
             </a>
           </li>
           <li>
             <a href="/admin/categories">
-              <i class="fa fa-building" aria-hidden="true"></i> &nbsp;Quản lý các mục
+              <i class="fa fa-building" aria-hidden="true"></i> &nbsp;Section Management 
             </a>
           </li>
           <li>
             <a href="/admin/users">
-              <i class="fa fa-users" aria-hidden="true"></i> &nbsp;Quản lý người dùng
+              <i class="fa fa-users" aria-hidden="true"></i> &nbsp;User Management
             </a>
           </li>
           <li>
             <a href="/admin/orders">
-              <i class="fas fa-hand-pointer" aria-hidden="true"></i>&nbsp; Xử lý đơn hàng
+              <i class="fas fa-hand-pointer" aria-hidden="true"></i>&nbsp; Order Management
             </a>
           </li>
           <li>
             <a href="/admin/stores">
-              <i class="fa fa-store" aria-hidden="true"></i> &nbsp;Quản lý cửa hàng
+              <i class="fa fa-store" aria-hidden="true"></i> &nbsp;Store Management
             </a>
           </li>
           <li>
             <a href="/admin/profile">
-              <i class="fas fa-user-cog" aria-hidden="true"></i>&nbsp;Tài khoản của tôi
+              <i class="fas fa-user-cog" aria-hidden="true"></i>&nbsp;My Account
             </a>
           </li>
       </ul>
@@ -108,7 +108,7 @@ if($userModel->getRole() != 'admin') {
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Đăng xuất</a></li>
+              <li><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</a></li>
             </ul>
           </div>
         </div>
