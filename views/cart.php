@@ -146,7 +146,8 @@ function total($params)
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
-                    <form accept-charset="utf-8" action="/cart" method="post">
+                    <form accept-charset="utf-8" action="/cart" method="post" id="payment_form">
+                        <input type="hidden" name="amount" value="<?php echo total($params['items'])?>">
                         <div class="cart-page__info">
                             <div class="cart-page__content__header">
                                 <div>Payment method</div>
@@ -163,7 +164,7 @@ function total($params)
                             </div> -->
                             <div class="cart-page__content__header__checkbox">
                                 <input value="momo-pay" class="form-check-input" type="radio" name="payment_method"
-                                    id="flexRadioDefault2">
+                                    id="flexRadioDefault2" onclick="document.getElementById('payment_form').action='momo.php';">
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     <img class="image-payment" src="/images/payment/momo.png">
                                     Momo
