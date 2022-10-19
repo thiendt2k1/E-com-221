@@ -34,8 +34,7 @@ class User extends UserModel
         $this->password = $params[4];
         $this->phone_number = $params[5];
         $this->role = $params[6];
-
-        $this->movie_ids = implode(',', $params[7]);
+        $this->movie_ids = $params[7];
     }
 
     public static function tableName(): string
