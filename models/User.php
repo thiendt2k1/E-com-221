@@ -35,7 +35,7 @@ class User extends UserModel
         $this->phone_number = $params[5];
         $this->role = $params[6];
 
-        $this->$movie_ids = implode(',', $params[7]);
+        $this->movie_ids = implode(',', $params[7]);
     }
 
     public static function tableName(): string
@@ -130,6 +130,7 @@ class User extends UserModel
         $user->email = $item['email'];
         $user->phone_number = $item['phone_number'];
         $user->role = $item['role'];
+        $user->movie_ids = $item['movie_ids'];
         return $user;
     }
 
@@ -172,8 +173,8 @@ class User extends UserModel
         $statement = self::prepare(
             "UPDATE users 
             SET 
-                movie_ids = '" . $user->movie_ids . "'
-            WHERE id = '" . $user->id . "';
+                movie_ids = '" . $this->movie_ids . "'
+            WHERE id = '" . $this->id . "';
             "
         );
         $statement->execute();

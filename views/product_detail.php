@@ -43,10 +43,22 @@ if (Application::isGuest()) {
                             </div>
                         </div>
                         <div class="product-detail-button">
-                            <button type="submit" id="liveToastBtn">
+                            <?php   $a = array();
+                                    if ($params['user']->getMovieIds() == NULL):
+                                        $a = array('5b03966a1acd4d5bbd672373');
+                                    endif;
+                                    if (array_key_exists($params['product']->id,$a)):      
+                            ?>
+                            <button type="submit" id="liveToastBtn" href="<?php $params['product']->download_url?>" download>
                                 <img class="item-button-image"
                                                         src="\images\Download.svg"
                                                         alt="" />
+                            <?php else: ?>
+                            <button type="submit" id="liveToastBtn" href="<?php $params['product']->download_url?>" download>
+                                <img class="item-button-image"
+                                                        src="/images/cart.png"
+                                                        alt="" />   
+                            <?php endif; ?> 
                             </button>
                         </div>
                     </div>

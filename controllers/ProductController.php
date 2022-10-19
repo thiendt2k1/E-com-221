@@ -13,6 +13,7 @@ use app\models\Cart;
 use app\models\CartDetail;
 use app\models\Category;
 use app\models\Record;
+use app\models\User;
 
 class ProductController extends Controller
 {
@@ -103,7 +104,8 @@ class ProductController extends Controller
     {
         $product_id = Application::$app->request->getParam('id');
         $product = Product::getProductDetail($product_id);
-
+        $user_id = Application::$app->session->get('user');
+        $user = User::getUserInfo($user_id);
 
         $addToCart = false;
 
@@ -119,7 +121,7 @@ class ProductController extends Controller
             $addToCart = true;
         }
 
-        $data = array('product' => $product, 'addToCart' => $addToCart);
+        $data = array('product' => $product, 'addToCart' => $addToCart, 'user' => $user);
         return $this->render('product_detail', $data);
     }
 }
