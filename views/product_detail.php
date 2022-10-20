@@ -36,7 +36,7 @@ if (Application::isGuest()) {
                            Stars: <?php echo $params['product']->stars ?>
                         </div>
                         <div class="product-detail-description">
-                           Rating: <?php echo $params['product']->rating ?>/5
+                           Rating: <?php echo $params['product']->rating ?>/100
                         </div>
                         <div><span
                                     class="price"> Price: <?php echo number_format($params['product']->price, 0, ',', '.') ?></span>đ
