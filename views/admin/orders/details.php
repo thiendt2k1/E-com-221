@@ -6,7 +6,7 @@
     <section class="panel">
       <header class="panel-heading">
         <h1>Order Detail</h1>
-        <a href="/admin/orders">Back</a>
+        <a href="/admin/orders" class="btn btn-success">Back</a>
       </header>
       <div class="panel-body">
         <table class="table table-striped table-hover dt-datatable">

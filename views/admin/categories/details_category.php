@@ -6,7 +6,7 @@
     <section class="panel">
       <header class="panel-heading">
         <h1>Category Detail</h1>
-        <a href="/admin/categories">Back</a>
+        <a href="/admin/categories" class="btn btn-success">Back</a>
       </header>
       <div class="panel-body">
         <dl class="dl-horizontal">

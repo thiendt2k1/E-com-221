@@ -13,8 +13,8 @@ use app\core\Application;
                 <?php
         $path = Application::$app->request->getPath();
         if (strpos($path, 'reject')) {
-          echo '<a href="/admin/orders/rejected">Back</a>';
-        } else echo '<a href="/admin/orders/accepted">Back</a>';
+          echo '<a href="/admin/orders/rejected" class="btn btn-success">Back</a>';
+        } else echo '<a href="/admin/orders/accepted" class="btn btn-success">Back</a>';
         ?>
             </header>
             <div class="panel-body">

@@ -6,7 +6,7 @@
     <section class="panel">
       <header class="panel-heading">
         <h1>User Info</h1>
-        <a href="/admin/users">Back</a>
+        <a href="/admin/users" class="btn btn-success">Back</a>
       </header>
       <div class="panel-body">
         <dl class="dl-horizontal">

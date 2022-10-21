@@ -6,7 +6,7 @@
     <section class="panel">
       <header class="panel-heading">
         <h1>Delete Store</h1>
-        <a href="/admin/stores">Back</a>
+        <a href="/admin/stores" class="btn btn-success">Back</a>
       </header>
       <div class="panel-body">
         <?php $form = app\core\Form\Form::begin('', "post") ?>

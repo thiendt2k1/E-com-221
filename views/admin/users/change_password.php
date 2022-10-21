@@ -7,7 +7,7 @@
       <header class="panel-heading">
         <h1>Change password</h1>
         <div> 
-          <a href="/admin/users/edit?id=<?=$userModel->getId()?>">Back</a>
+          <a href="/admin/users/edit?id=<?=$userModel->getId()?>" class="btn btn-success">Back</a>
         </div><br>
       </header>
       <div class="panel-body">

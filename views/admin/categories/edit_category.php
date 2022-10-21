@@ -6,7 +6,7 @@
     <section class="panel">
       <header class="panel-heading">
         <h1>Change Category</h1>
-        <a href="/admin/categories">Back</a>
+        <a href="/admin/categories" class="btn btn-success">Back</a>
       </header>
       <div class="panel-body">
         <?php $form = app\core\Form\Form::begin('', "post") ?>
