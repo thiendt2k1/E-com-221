@@ -104,6 +104,9 @@ class ProductController extends Controller
     {
         $product_id = Application::$app->request->getParam('id');
         $product = Product::getProductDetail($product_id);
+        if (Application::isGuest()) {
+            Application::$app->response->redirect('/login');
+        }
         $user_id = Application::$app->session->get('user');
         $user = User::getUserInfo($user_id);
 
