@@ -1,12 +1,12 @@
 <script type="text/javascript">
-  document.title = 'Sửa đổi sản phẩm';
+  document.title = 'Change Product Detail';
 </script> 
 <div class="row">
   <div class="col-lg-12">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Sửa đổi sản phẩm</h1>
-        <a href="/admin/products">Trở về</a>
+        <h1>Change Product Detail</h1>
+        <a href="/admin/products">Back</a>
       </header>
       <div class="panel-body">
         <?php $form = app\core\Form\Form::begin('', "post") ?>

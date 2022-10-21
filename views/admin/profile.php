@@ -2,7 +2,7 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h4 class="text-left">Profile Settings</h4>
     </div><br>
-    <a href="/admin">Trở về</a>
+    <a href="/admin">Back</a>
     <?php $form = app\core\Form\Form::begin('', "post") ?><br>
     <div class="row">
         <div class="col-md-5 border-right">
@@ -30,7 +30,7 @@
                     </div>
                 </div><br><br>
                 <div class="mt-5 text-center">
-                    <button class="btn btn-primary profile-button" type="submit">Cập nhật</button>
+                    <button class="btn btn-primary profile-button" type="submit">Update</button>
                 </div>
             </div>
         </div>

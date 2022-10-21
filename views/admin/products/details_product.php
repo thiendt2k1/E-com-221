@@ -1,12 +1,12 @@
 <script type="text/javascript">
-  document.title = 'Thông tin sản phẩm';
+  document.title = 'Product Detail';
 </script> 
 <div class="row">
   <div class="col-lg-6">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Thông tin chi tiết sản phẩm</h1>
-        <a href="/admin/products">Trở về</a>
+        <h1>Product Detail</h1>
+        <a href="/admin/products">Back</a>
       </header>
       <div class="panel-body">
         <dl class="dl-horizontal">

@@ -1,12 +1,12 @@
 <script type="text/javascript">
-  document.title = 'Xoá sản phẩm';
+  document.title = 'Delete Product';
 </script> 
 <div class="row">
   <div class="col-lg-6">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Xóa mục</h1>
-        <a href="/admin/products">Trở về</a>
+        <h1>Delete Product</h1>
+        <a href="/admin/products">Back</a>
       </header>
       <div class="panel-body">
         <?php $form = app\core\Form\Form::begin('', "post") ?>
@@ -17,7 +17,7 @@
             <dt>Description</dt><dd><?= $params['productModel']->getDescription() ?></dd>
             <dt>Price</dt><dd><?= $params['productModel']->getPrice() ?></dd>
           </dl>
-          <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Xóa mục</button>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
         <?php app\core\form\Form::end() ?>
       </div>
     </section>
