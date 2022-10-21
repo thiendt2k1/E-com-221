@@ -1,12 +1,12 @@
 <script type="text/javascript">
-  document.title = 'Sửa đổi cửa hàng';
+  document.title = 'Change Store Detail';
 </script> 
 <div class="row">
   <div class="col-lg-12">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Chỉnh sửa thông tin cửa hàng</h1>
-        <a href="/admin/stores">Trở về</a>
+        <h1>Change Store Detail</h1>
+        <a href="/admin/stores">Back</a>
       </header>
       <div class="panel-body">
         <?php $form = app\core\Form\Form::begin('', "post") ?>
@@ -29,7 +29,7 @@
             </div>
             <div class="form-row">
                 <div class="col-md-4">
-                <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i>Lưu</button>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i>Update</button>
                 </div>
             </div>
         <?php app\core\form\Form::end() ?>
