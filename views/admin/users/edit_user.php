@@ -1,16 +1,16 @@
 <script type="text/javascript">
-  document.title = 'Sửa đổi người dùng';
+  document.title = 'Change User Info';
 </script> 
 <div class="row">
   <div class="col-lg-12">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Chỉnh sửa thông tin người dùng</h1>
+        <h1>Change User Info</h1>
         <div> 
-          <a href="/admin/users">Trở về</a>
+          <a href="/admin/users">Back</a>
         </div><br>
         <div class="changepassword"> 
-          <a href="/admin/users/edit/password?id=<?=$userModel->getId()?>">Cấp lại mật khẩu</a>
+          <a href="/admin/users/edit/password?id=<?=$userModel->getId()?>">Change password</a>
         </div><br>
       </header>
       <div class="panel-body">
@@ -32,7 +32,7 @@
             </div>
             <div class="form-row">
                 <div class="col-md-4">
-                <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i>Lưu</button>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i>Update</button>
                 </div>
             </div>
         <?php app\core\form\Form::end() ?>

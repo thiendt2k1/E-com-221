@@ -1,12 +1,12 @@
 <script type="text/javascript">
-  document.title = 'Thêm người dùng';
+  document.title = 'Add User';
 </script> 
 <div class="row">
   <div class="col-lg-12">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Thêm người dùng</h1>
-        <a href="/admin/users">Trở về</a>
+        <h1>Add User</h1>
+        <a href="/admin/users">Back</a>
       </header>
       <div class="panel-body">
         <?php $form = app\core\Form\Form::begin('', "post") ?>
