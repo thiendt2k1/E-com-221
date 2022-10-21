@@ -1,12 +1,12 @@
 <script type="text/javascript">
-  document.title = 'Chi tiết mục';
+  document.title = 'Category Detail';
 </script> 
 <div class="row">
   <div class="col-lg-6">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Thông tin chi tiết mục</h1>
-        <a href="/admin/categories">Trở về</a>
+        <h1>Category Detail</h1>
+        <a href="/admin/categories">Back</a>
       </header>
       <div class="panel-body">
         <dl class="dl-horizontal">

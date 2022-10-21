@@ -1,12 +1,12 @@
 <script type="text/javascript">
-  document.title = 'Danh sách các mục';
+  document.title = 'Categories';
 </script> 
 <div class="row">
   <div class="col-lg-12">
     <section class="panel">
       <header class="panel-heading">
-        <h1>Thể loại</h1>
-          <a href="/admin/categories/create" class="btn btn-success">Tạo ra</a>
+        <h1>Categories</h1>
+          <a href="/admin/categories/create" class="btn btn-success">Create</a>
       </header>
       <div class="panel-body">
         <table class="table table-striped table-hover dt-datatable">

@@ -61,7 +61,7 @@ if($userModel->getRole() != 'admin') {
           </li>
           <li>
             <a href="/admin/categories">
-              <i class="fa fa-building" aria-hidden="true"></i> &nbsp;Section Management 
+              <i class="fa fa-building" aria-hidden="true"></i> &nbsp;Category Management 
             </a>
           </li>
           <li>
