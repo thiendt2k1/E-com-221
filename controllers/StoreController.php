@@ -79,7 +79,7 @@ class StoreController extends Controller
             $id = Application::$app->request->getParam('id');
             $storeModel = Store::get($id);
             $this->setLayout('admin');
-            return $this->render('/admin/products/details_product', [
+            return $this->render('/admin/stores/details_store', [
                 'storeModel' => $storeModel
             ]);
         }
