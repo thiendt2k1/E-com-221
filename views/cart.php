@@ -148,6 +148,12 @@ function total($params)
                 <div class="col-md-12 col-lg-4">
                     <form accept-charset="utf-8" action="/cart" method="post" id="payment_form">
                         <input type="hidden" name="amount" value="<?php echo total($params['items'])?>">
+                        <input type="hidden" name="userFullName" value = "<?php echo $params['user']->getName()?>">
+                        <input type="hidden" name="userEmail" value = "<?php echo $params['user']->getEmail()?>">
+                        <input type="hidden" name="userPhoneNumber" value = "<?php echo $params['user']->getPhoneNumer()?>">
+                         
+                        <?php /* <input type="hidden" name="productID" value = "<?php echo $params['order']->getId()?>">*/ ?>
+
                         <div class="cart-page__info">
                             <div class="cart-page__content__header">
                                 <div>Payment method</div>
@@ -172,7 +178,7 @@ function total($params)
                             </div>
                             <div class="cart-page__content__header__checkbox">
                                 <input value="zalo-pay" class="form-check-input" type="radio" name="payment_method"
-                                    id="flexRadioDefault2">
+                                    id="flexRadioDefault2" onclick="document.getElementById('payment_form').action='vnpay_php/index.php';">
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     <img class="image-payment" src="/images/payment/zalo.png">
                                     ZaloPay
