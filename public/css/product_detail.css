@@ -113,7 +113,7 @@
 }
 
 .inner-content {
-    margin: 0 0 120px 0;
+    margin: 0 0 20px 0;
 }
 .c100.big {
     font-size: 120px;
@@ -137,10 +137,6 @@
     background-color: #cccccc;
 }
 .c100.p50 .bar {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 .c100 .bar{
@@ -160,6 +156,9 @@
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
 
+}
+.c100 *{
+    box-sizing: content-box;
 }
 .c100 > span {
     position: absolute;

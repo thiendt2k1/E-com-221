@@ -24,8 +24,11 @@ if (Application::isGuest()) {
                         </div>
                         <div class="inner-content text-center">
                             <div class="c100 p50 big left green">
-                                <span>50%</span>
-                                <div class="slice"><div class="bar"></div><div class="fill"></div></div>
+                                <span><?php echo $params['product']->rating ?>%</span>
+                                <div class="slice">
+                                    <div class="bar"></div>
+                                    <div class="fill"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-detail-footer">
