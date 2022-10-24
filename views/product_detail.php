@@ -24,6 +24,7 @@ if (Application::isGuest()) {
                             <li class="nodot"> <?php echo $params['product']->getCategory() ?> </li>
                             <li> <?php echo $params['product']->year ?> </li>
                             <li> <?php echo $params['product']->duration ?> min </li>
+                            <li> <?php echo number_format($params['product']->price, 0, ',', '.') ?>đ</li>
 </ul>    
                     </div>
                         <ul class="auto actions">
@@ -38,17 +39,33 @@ if (Application::isGuest()) {
                         </ul>
                         <div class="product-detail-footer">
                         <div class="product-detail-description">
-                        <div class="text">Overview </div> <br> <?php echo $params['product']->description ?>  
+                        <div class="text">Overview </div> <?php echo $params['product']->description ?>  
                         </div>
-                        <div class="product-detail-description" style="font-weight: bold;">
-                           Director: <?php echo $params['product']->director ?>
-                        </div>
-                        <div class="product-detail-description" style="font-weight: bold;">
-                           Stars: <?php echo $params['product']->stars ?>
-                        </div>
-                        <div><span
-                                    class="price"> Price: <?php echo number_format($params['product']->price, 0, ',', '.') ?></span>đ
-                            </div>
+                        <ol class="people no_image">
+                        
+                      <?php foreach($params['product']->getDirector() as $dir){
+                        echo '
+                        <li class="profile">
+                        <p><span>'.$dir.'</span></p>
+                        <p class="character">Director</p>
+                        </li>
+                        ';    
+                      } 
+                      ?>
+                    
+                        </ol>
+                        <ol class="people no_image">
+                    
+                      <?php foreach($params['product']->getStars() as $star){
+                        echo '
+                        <li class="profile">
+                        <p><span>'.$star.'</span></p>
+                        <p class="character">Actor</p>
+                        </li>';    
+                      } 
+                      ?>
+                    
+                        </ol>
                         </div>
                         <div class="product-detail-button">
                             <?php   $a = array();

@@ -180,7 +180,45 @@ div.product-detail-description div.text {
     white-space: pre-line;
     font-size: 40px;
 }
-
+ol.people.no_image, ol.people.no_cast {
+    margin-top: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+ol.people {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+ol.people.no_image li {
+    width: 33%;
+    flex-basis: 33%;
+    text-align: left;
+    margin-bottom: 14px;
+    margin-right: 0;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+ol.people li {
+    min-width: 140px;
+    width: 140px;
+    margin-right: 10px;
+}
+ol.people li p {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ol.people li p span {
+    font-weight: bold;
+}
 .product-detail-size-header {
     background-color: #e4e4e4;
     text-transform: uppercase;
