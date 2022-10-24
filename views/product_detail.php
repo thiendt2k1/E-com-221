@@ -21,7 +21,7 @@ if (Application::isGuest()) {
                         <div class="product-detail-name"><?php echo $params['product']->name ?></div>
                         <div class="product-detail-name-footer" >
                         <ul class="auto actions" > 
-                            <li> <?php echo $params['product']->getCategory() ?> </li>
+                            <li class="nodot"> <?php echo $params['product']->getCategory() ?> </li>
                             <li> <?php echo $params['product']->year ?> </li>
                             <li> <?php echo $params['product']->duration ?> min </li>
 </ul>    
@@ -29,7 +29,7 @@ if (Application::isGuest()) {
                         <ul class="auto actions">
                             <li class="chart">
                             <div class="bar-container">
-                            <div class="circular-progress" style="background: conic-gradient(#FFCAF0 <?php echo $params['product']->rating * 3.6; ?>deg, #003866 5deg);">
+                            <div class="circular-progress" style="background: conic-gradient(#21d07a <?php echo $params['product']->rating * 3.6; ?>deg, #204529 5deg);">
                                 <div class="value-container"><?php echo $params['product']->rating; ?>%</div>
                                 </div>
                             </div>
