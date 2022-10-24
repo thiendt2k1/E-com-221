@@ -1,48 +1,11 @@
 <?php
 
-function extraPrice($size, $price)
-{
-    $extraPrice = $price;
-    switch ($size) {
-        case 'Small':
-            $extraPrice += 0;
-            break;
-        case 'Medium':
-            $extraPrice += 3000;
-            break;
-        case 'Large':
-            $extraPrice += 6000;
-            break;
-        default:
-            break;
-    }
-    return $extraPrice;
-}
-
-function sizeContent($size)
-{
-    $str = '';
-    switch ($size) {
-        case 'Small':
-            $str = 'Small';
-            break;
-        case 'Medium':
-            $str = 'Meidum (+3.000đ)';
-            break;
-        case 'Large':
-            $str = 'Large (+6.000đ)';
-            break;
-        default:
-            break;
-    }
-    return $str;
-}
 
 function total($params)
 {
     $total = 0;
     foreach ($params as $param) {
-        $total += extraPrice($param->size, $param->price) * $param->quantity;
+        $total += $param->price;
     }
     return $total;
 }
@@ -88,13 +51,12 @@ function total($params)
                                                             <div class="col-lg-6 col-md-6 col-sm-8 col-8">
                                                                 <h6>' . $param->name . '</h6>
                                                                 <div>Price: ' . number_format($param->price, 0, ',', '.') . ' đ</div>
-                                                                <div>Size: ' . sizeContent($param->size) . '</div>
                                                             </div>
                                                             <div class="col-lg-3 col-md-3 col-sm-8 col-8">
                                                                 <div class="product-detail-footer">
                                                                     <div class="product-detail-footer-quantity">
                                                                         Quantity: <input type="text" name="quantity" class="form-control quantity-input"
-                                                                            id="product-quantity" value="' . $param->quantity . '">
+                                                                            id="product-quantity" value="1">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -103,18 +65,6 @@ function total($params)
                                                                     <img src="/images/delete.svg" class="cart-page__delete" />
                                                                 </a>
 
-                                                            </div>
-                                                        </div>
-                                                        <div class="row gy-2">
-                                                            <div class="col-lg-6 col-sm-8 col-8">
-                                                                <div class="input-group mb-3">
-                                                                    <input name="note" type="text" id="cart-page__note" class="form-control"
-                                                                        placeholder="Note" aria-label="note" aria-describedby="basic-addon1"
-                                                                        value="' . ($param->note) . '">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-sm-4 col-4">
-                                                                <button type="submit" class="update-btn">Update</button>
                                                             </div>
                                                         </div>
                                                     </div>
