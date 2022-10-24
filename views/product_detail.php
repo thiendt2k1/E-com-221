@@ -22,6 +22,21 @@ if (Application::isGuest()) {
                         <div class="product-detail-name-footer" >
                         <?php echo $params['product']->year ?> <?php echo $params['product']->duration ?> min
                         </div>
+                        <ul class="auto actions">
+
+                            <li class="chart">
+                            <div class="consensus details">
+                                <div class="outer_ring">
+                                <div class="user_score_chart" data-percent="77.0" data-track-color="#204529" data-bar-color="#fffff">
+                                    <div class="percent">
+                                        <span class="icon icon-r77"></span>
+                                    </div>
+                                <canvas height="75" width="75" style="height: 60px; width: 60px;"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="text">User<br>Score</div>
+                            </li>
+                        </ul>
                         <div class="product-detail-footer">
                         <div class="product-detail-description" >
                            Genre: <?php echo $params['product']->getCategory() ?>
@@ -36,7 +51,7 @@ if (Application::isGuest()) {
                            Stars: <?php echo $params['product']->stars ?>
                         </div>
                         <div class="product-detail-description">
-                           Rating: <?php echo $params['product']->rating ?>/100
+                           Rating: <?php echo $params['product']->rating ?>%
                         </div>
                         <div><span
                                     class="price"> Price: <?php echo number_format($params['product']->price, 0, ',', '.') ?></span>đ
