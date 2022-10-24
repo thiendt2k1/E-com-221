@@ -22,21 +22,12 @@ if (Application::isGuest()) {
                         <div class="product-detail-name-footer" >
                         <?php echo $params['product']->year ?> <?php echo $params['product']->duration ?> min
                         </div>
-                        <ul class="auto actions">
-
-                            <li class="chart">
-                            <div class="consensus details">
-                                <div class="outer_ring">
-                                <div class="user_score_chart" data-percent="77.0" data-track-color="#204529" data-bar-color="#fffff">
-                                    <div class="percent">
-                                        <span class="icon icon-r77"></span>
-                                    </div>
-                                <canvas height="75" width="75" style="height: 60px; width: 60px;"></canvas></div>
-                                </div>
+                        <div class="inner-content text-center">
+                            <div class="c100 p50 big left green">
+                                <span>50%</span>
+                                <div class="slice"><div class="bar"></div><div class="fill"></div></div>
                             </div>
-                            <div class="text">User<br>Score</div>
-                            </li>
-                        </ul>
+                        </div>
                         <div class="product-detail-footer">
                         <div class="product-detail-description" >
                            Genre: <?php echo $params['product']->getCategory() ?>
