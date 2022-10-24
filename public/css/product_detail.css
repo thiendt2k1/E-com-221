@@ -179,6 +179,36 @@ div.consensus .user_score_chart canvas {
     top: 0;
     left: 0;
 }
+
+
+.bar-container {
+    background-color: #003866;
+    display: grid;
+    place-items: center;
+}
+.circular-progress {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.circular-progress::before {
+    content: "";
+    display: block !important;
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: #003866;
+    border-radius: 50%;
+}
+.value-container {
+    position: relative;
+    font-size: 20px;
+    color: #FFCAF0;
+}
+
 ul.actions li.chart div.text {
     font-weight: 700;
     margin-left: 6px;

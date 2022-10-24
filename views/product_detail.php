@@ -28,13 +28,9 @@ if (Application::isGuest()) {
                     </div>
                         <ul class="auto actions">
                             <li class="chart">
-                            <div class="consensus details">
-                                <div class="outer_ring">
-                                <div class="user_score_chart" data-percent="0" data-track-color="#204529" data-bar-color="#21d07a">
-                                    <div class="percent">
-                                        <span class="icon"><?php echo $params['product']->rating ?>%</span>
-                                    </div>
-                                <canvas height="75" width="75" style="height: 60px; width: 60px;"></canvas></div>
+                            <div class="bar-container">
+                            <div class="circular-progress" style="background: conic-gradient(#FFCAF0 <?php echo $params['product']->rating * 3.6; ?>deg, #003866 5deg);">
+                                <div class="value-container"><?php echo $params['product']->rating; ?>%</div>
                                 </div>
                             </div>
                             <div class="text">User<br>Score</div>
