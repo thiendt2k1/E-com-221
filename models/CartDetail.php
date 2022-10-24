@@ -12,7 +12,7 @@ class CartDetail extends DBModel
     public string $id = '';
     public string $product_id = '';
     public string $cart_id = '';
-    public string $quantity = '';
+    public string $quantity = '1';
     public string $note = '';
     public string $size = '';
 
@@ -20,7 +20,7 @@ class CartDetail extends DBModel
         $order_detail_id = '',
         $product_id = '',
         $cart_id = '',
-        $quantity = '',
+        $quantity = '1',
         $note = '',
         $size = ''
     ) {
