@@ -15,9 +15,9 @@ class m0002_importData
         $db->pdo->exec($sql);
 
 		$db = Application::$app->db;
-        $sql = "INSERT INTO ecom.users (id,firstname,lastname,email,phone_number,password,image_url,role,created_at,updated_at) VALUES 
-            ('6191e42fe4e3f','admin','admin','admin@gmail.com','0924955363','" . password_hash('12345678', PASSWORD_DEFAULT) . "','','admin','2021-11-15 11:38:07','2021-11-15 11:38:07'),
-			('123456789ed74','user','user','user@gmail.com','0924945687','" . password_hash('123456789', PASSWORD_DEFAULT) . "','','client','2021-11-15 11:38:07','2021-11-15 11:38:07');";
+        $sql = "INSERT INTO ecom.users (id,firstname,lastname,email,phone_number,password,image_url,role,movie_ids,created_at,updated_at) VALUES 
+            ('6191e42fe4e3f','admin','admin','admin@gmail.com','0924955363','" . password_hash('12345678', PASSWORD_DEFAULT) . "','','admin','5b03966a1acd4d5bbd672373,5b03966a1acd4d5bbd672374,5b03966a1acd4d5bbd672375,5b03966a1acd4d5bbd672377,5b03966a1acd4d5bbd672378,5b03966a1acd4d5bbd67237a,5b03966a1acd4d5bbd67237b,5b03966a1acd4d5bbd67237c,5b03966a1acd4d5bbd67237e,5b03966a1acd4d5bbd67237f,5b03966a1acd4d5bbd672380,5b03966a1acd4d5bbd672390,5b03966a1acd4d5bbd672391,5b03966a1acd4d5bbd672393,5b03966a1acd4d5bbd672394,5b03966a1acd4d5bbd672395,5b03966a1acd4d5bbd672397,5b03966a1acd4d5bbd672398,5b03966a1acd4d5bbd67239c,5b03966a1acd4d5bbd67239d,5b03966a1acd4d5bbd67239e,5b03966a1acd4d5bbd6723a0,5b03966a1acd4d5bbd6723a1,5b03966a1acd4d5bbd6723a2,5b03966a1acd4d5bbd6723a3','2021-11-15 11:38:07','2021-11-15 11:38:07'),
+			('123456789ed74','user','user','user@gmail.com','0924945687','" . password_hash('123456789', PASSWORD_DEFAULT) . "','','client','5b03966a1acd4d5bbd672373','2021-11-15 11:38:07','2021-11-15 11:38:07');";
         $db->pdo->exec($sql);
 
         $db = Application::$app->db;

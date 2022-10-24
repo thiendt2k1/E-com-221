@@ -69,22 +69,27 @@ if (Application::isGuest()) {
                         </div>
                         <div class="product-detail-button">
                             <?php   $a = array();
+                                    print_r($params['product']->download_url);
                                     if ($params['user']->getMovieIds() == NULL):
-                                        $a = array('5b03966a1acd4d5bbd672373');
+                                        print_r("HELLO");
+                                        $a = array('');
+                                    else:
+                                        $a = $params['user']->getMovieIds();
                                     endif;
-                                    if (array_key_exists($params['product']->id,$a)):      
+                                    if (in_array($params['product']->id,$a)):      
                             ?>
-                            <button type="submit" id="liveToastBtn" href="<?php $params['product']->download_url?>" download>
+                            <button type="download" id="liveToastBtn" href="<?php echo $params['product']->download_url ?>" download>
                                 <img class="item-button-image"
                                                         src="\images\Download.svg"
                                                         alt="" />
+                            </button>
                             <?php else: ?>
-                            <button type="submit" id="liveToastBtn" href="<?php $params['product']->download_url?>" download>
+                            <button type="submit" id="liveToastBtn" href="<?php echo $params['product']->download_url?>" download>
                                 <img class="item-button-image"
                                                         src="/images/cart.png"
                                                         alt="" />   
-                            <?php endif; ?> 
                             </button>
+                            <?php endif; ?> 
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-6">
