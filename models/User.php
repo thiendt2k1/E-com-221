@@ -20,7 +20,8 @@ class User extends UserModel
 
 
     public function getId() { return $this->id; }
-    public function getMovieIds() { return explode(',',$this->movie_ids); }    public function getRole() { return $this->role; }
+    public function getMovieIds() { return explode(',',$this->movie_ids); }    
+    public function getRole() { return $this->role; }
     public function setRole($role) { $this->role = $role; }
     public function getName() { return $this->getDisplayName(); }
     public function getEmail() { return $this->email; }

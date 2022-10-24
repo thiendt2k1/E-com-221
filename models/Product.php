@@ -81,10 +81,10 @@ class Product extends DBModel
     public function getDuration() { return $this->duration; } 
 
     public function setDirector($director) { $this->director = $director; }
-    public function getDirector() { return $this->director; } 
+    public function getDirector() { return explode(',',$this->director); }    
 
     public function setStars($stars) { $this->stars = $stars; }
-    public function getStars() { return $this->stars; } 
+    public function getStars() { return explode(',',$this->stars); }    
 
     public function setRating($rating) { $this->rating = $rating; }
     public function getRating() { return $this->rating; } 
