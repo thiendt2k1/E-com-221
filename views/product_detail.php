@@ -69,7 +69,6 @@ if (Application::isGuest()) {
                         </div>
                         <div class="product-detail-button">
                             <?php   $a = array();
-                                    print_r($params['product']->download_url);
                                     if ($params['user']->getMovieIds() == NULL):
                                         print_r("HELLO");
                                         $a = array('');
@@ -78,11 +77,11 @@ if (Application::isGuest()) {
                                     endif;
                                     if (in_array($params['product']->id,$a)):      
                             ?>
-                            <button type="download" id="liveToastBtn" href="<?php echo $params['product']->download_url ?>" download>
+                            <a href="<?php echo $params['product']->download_url ?>">
                                 <img class="item-button-image"
                                                         src="\images\Download.svg"
                                                         alt="" />
-                            </button>
+                            </a>
                             <?php else: ?>
                             <button type="submit" id="liveToastBtn" href="<?php echo $params['product']->download_url?>" download>
                                 <img class="item-button-image"
