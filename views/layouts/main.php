@@ -30,7 +30,7 @@ header("Content-type: text/html; charset=utf-8");
     <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/order.css">
 
-    <title>Kaffee store</title>
+    <title>Filmware</title>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -102,7 +102,7 @@ header("Content-type: text/html; charset=utf-8");
                             <div class="header-image header-image-user">
                                 <img class="header-image-icon" src="/images/user.png" />
                             </div>
-                            Chào <?php echo Application::$app->user->getDisplayName() ?>
+                            Welcome <?php echo Application::$app->user->getDisplayName() ?>
                         </a>
                     </li>
                     <li class="nav-item active">
@@ -160,21 +160,21 @@ header("Content-type: text/html; charset=utf-8");
                                         <div class="col-md-5 col-lg-4">
                                             <h6>Website info</h6>
                                             <ul>
-                                                <li><a href="/">Home</a></li>
+                                                <li><a color="white" href="/">Home</a></li>
                                                 <li><a href="/menu">Libraries</a></li>
                                                 <li><a href="/stores">Warehouse</a></li>
                                                 <li><a href="/about">About us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-5 col-lg-4">
+                                        <!-- <div class="col-md-5 col-lg-4">
                                             <h6>Terms of Service</h6>
                                             <ul>
                                                 <li><a href="#">Quy chế website</a></li>
                                                 <li><a href="#">Bảo mật thông tin</a></li>
 
                                             </ul>
-                                        </div>
+                                        </div> -->
                                         <div class="col-md-12 col-lg-4">
                                             <h6>Contact us</h6>
                                             <ul>
@@ -187,11 +187,11 @@ header("Content-type: text/html; charset=utf-8");
                                                     Ward 15, Binh Thanh District, Ho Chi Minh, Vietnam.
                                                 </li>
                                                 <li>
-                                                    (+84)778 812 3456
+                                                    (+84)906 600 272
                                                 </li>
                                                 <li>
-                                                    <a href="https://kaffeestore.herokuapp.com">
-                                                        https://kaffeestore.herokuapp.com
+                                                    <a href="https://filmware.herokuapp.com">
+                                                        https://filmware.herokuapp.com
                                                     </a>
                                                 </li>
                                             </ul>
@@ -209,7 +209,7 @@ header("Content-type: text/html; charset=utf-8");
 
     <div class="footer">
         <div class="footer__inner">
-            <h6>Copyright @ 2021 KAFFEE STORE. All rights reversed.</h6>
+            <h6>Copyright @ 2022 FILMWARE. All rights reversed.</h6>
         </div>
     </div>
 

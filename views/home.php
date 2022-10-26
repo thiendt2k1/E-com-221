@@ -106,13 +106,10 @@
         <div class="row">
             <div class="col">
                 <div id="home-video" class="home-video">
-                    <div id="home-video-image">
-                        <img class="home-video-image" src="/images/kv-text.png" />
-                    </div>
                     <iframe id="topVideo" class="video-play mb_YTVPlayer" frameborder="0" allowfullscreen="1"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         title="YouTube video player"
-                        src="https://www.youtube.com/embed/9RUT30ni1_Y?&mute=1&loop=1&playlist=9RUT30ni1_Y&autoplay=1&amp;controls=0&amp;rel=0&amp;disablekb=0&amp;modestbranding=1&amp;showinfo=0&amp;preload=true&amp;playsinline=1&amp;iv_load_policy=3&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fcaztus.vn&amp;widgetid=1"></iframe>
+                        src="https://www.youtube.com/embed/y9BBhIALOf4?mute=1&loop=1&playlist=y9BBhIALOf4&autoplay=1&controls=0&amp;rel=0&amp;disablekb=0&amp;modestbranding=1&amp;showinfo=0&amp;preload=true&amp;playsinline=1&amp;iv_load_policy=3&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fcaztus.vn&amp;widgetid=1"></iframe>
                 </div>
             </div>
         </div>

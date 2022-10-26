@@ -63,6 +63,17 @@
   color: white;
   border-bottom: 2px solid white;
 }
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
 
 .navbar-toggler {
   border-color: rgba(0, 0, 0, 0.1);
@@ -84,6 +95,7 @@
 .footer {
   width: 100%;
   background-color: black;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;

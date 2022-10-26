@@ -4,5 +4,7 @@
 }
 
 .page-heading img {
-    width: 100%;
+    width: 1320px;
+    height: 576px;
+    overflow: hidden;
 }

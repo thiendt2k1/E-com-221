@@ -1,6 +1,6 @@
 <div class="about">
     <div class="page-heading">
-        <img class="page-banner" src="/images/page-banner.jpg" alt="page-banner" />
+        <img class="page-banner" src="/images/poster/film-warehouse.jpg" alt="page-banner" />
         <p style="text-align:center">
             <span style="font-size:25px">
                 <span style="color:#4d4dff">
