@@ -29,7 +29,9 @@
     margin-bottom: 10px;
   
 }
-
+.order-page__item .row .col  {
+    margin-left: 100px;
+}
 .order-page__list {
     width: 100%;
     margin-bottom: 50px;

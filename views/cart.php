@@ -122,16 +122,16 @@ function total($params)
                                 <input value="zalo-pay" class="form-check-input" type="radio" name="payment_method"
                                     id="flexRadioDefault2" onclick="document.getElementById('payment_form').action='vnpay_php/index.php';">
                                 <label class="form-check-label" for="flexRadioDefault2">
-                                    <img class="image-payment" src="/images/payment/zalo.png">
-                                    ZaloPay
+                                    <img class="image-payment" src="/images/payment/vnpay.jpg">
+                                    VNPay
                                 </label>
                             </div>
                             <div class="cart-page__content__header__checkbox">
                                 <input value="shopee-pay" class="form-check-input" type="radio" name="payment_method"
                                     id="flexRadioDefault2">
                                 <label class="form-check-label" for="flexRadioDefault2">
-                                    <img class="image-payment" src="/images/payment/shopee.png">
-                                    ShopeePay
+                                    <img class="image-payment" src="/images/payment/cash.jpeg">
+                                    Other
                                 </label>
                             </div>
                             <div class="cart-page__content__header__checkbox">
@@ -143,7 +143,7 @@ function total($params)
                                 </label>
                             </div>
                             <div>
-                                <?php echo (count($params['items']) == 0 ? '' : '<button type="submit" class="checkout-button">Đặt hàng</button>') ?>
+                                <?php echo (count($params['items']) == 0 ? '' : '<button type="submit" class="checkout-button">Order</button>') ?>
                             </div>
                         </div>
                     </form>

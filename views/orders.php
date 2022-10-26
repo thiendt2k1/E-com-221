@@ -43,10 +43,10 @@ function orderStatus($status)
                         No.
                     </div>
                     <div class="col">
-                        Product ID
+                        Order ID
                     </div>
                     <div class="col">
-                        Product status
+                        Order status
                     </div>
                     <div class="col">
                         Order date
