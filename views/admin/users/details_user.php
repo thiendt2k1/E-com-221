@@ -15,6 +15,7 @@
           <dt>Email</dt><dd><?= $params['userModel']->getEmail() ?></dd>
           <dt>Phone No.</dt><dd><?= $params['userModel']->getPhoneNumer() ?></dd>
           <dt>Role</dt><dd><?= $params['userModel']->getRole() ?></dd>
+          <dt>Owned</dt><dd><?=join(',<br>',$userModel->getMovieIds())?></dd>
         </dl>
       </div>
     </section>
