@@ -42,3 +42,6 @@
 .numbers {
     color: #ffffff;
 }
+a{
+    text-decoration: none !important;
+}

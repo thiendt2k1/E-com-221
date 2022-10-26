@@ -14,6 +14,7 @@
             </div>
           </div>
           <div class="col-7 d-flex align-items-center">
+            <a href="/admin/users">
             <div class="numbers">
               <p class="card-category">Member</p>
               <?php
@@ -24,6 +25,7 @@
                   echo '<h4 class="card-title"> ' . $count .' </h4>';
               ?>
             </div>
+            </a>
           </div>
         </div>
       </div>
@@ -60,6 +62,7 @@
             </div>
           </div>
           <div class="col-7 d-flex align-items-center">
+            <a href="/admin/products">
             <div class="numbers">
               <p class="card-category">Products</p>
                   <?php
@@ -70,6 +73,7 @@
                     echo '<h4 class="card-title"> ' . $count .' </h4>';
                   ?>
             </div>
+            </a>
           </div>
         </div>
       </div>
@@ -85,12 +89,14 @@
             </div>
           </div>
           <div class="col-7 d-flex align-items-center">
+            <a href="/admin/orders">
             <div class="numbers">
-              <p class="card-category">Sold</p>
+              <p class="card-category">Orders</p>
                 <?php
                     echo '<h4 class="card-title"> ' . $params['list'][1] .' </h4>';
                 ?>
             </div>
+            </a>
           </div>
         </div>
       </div>
