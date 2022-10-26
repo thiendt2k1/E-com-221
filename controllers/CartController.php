@@ -60,30 +60,6 @@ class CartController extends Controller
         ]);
     }
 
-    public function update()
-    {
-        if (Application::isGuest()) {
-            Application::$app->response->redirect('/login');
-        }
-
-        $cart_id = Application::$app->cart->id;
-        $user = Application::$app->user;
-
-        $id = Application::$app->request->getParam('order_detail_id');
-        $newNote = Application::$app->request->getBody()['note'];
-        $newQuantity = Application::$app->request->getBody()['quantity'];
-
-
-        CartItem::update($id, $newNote, $newQuantity);
-
-        $items = CartItem::getCartItem($cart_id);
-
-        return $this->render('cart', [
-            'items' => $items,
-            'user' => $user,
-        ]);
-    }
-
     public function placeOrder()
     {
         if (Application::isGuest()) {
@@ -106,9 +82,6 @@ class CartController extends Controller
                 uniqid(),
                 $item->product_id,
                 $order->id,
-                $item->quantity,
-                $item->note,
-                $item->size
             );
             $orderDetail->save();
         }

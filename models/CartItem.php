@@ -11,8 +11,6 @@ class CartItem extends DBModel
     public string $id = '';
     public string $product_id = '';
     public string $cart_id = '';
-    public int $quantity = 0;
-    public string $note = '';
     public string $category_id = '';
     public string $name = '';
     public float $price = 0;
@@ -23,37 +21,25 @@ class CartItem extends DBModel
         $order_detail_id,
         $product_id,
         $cart_id,
-        $quantity,
-        $note,
         $category_id = '',
         $name = '',
         $price = 0,
         $description = '',
         $image_url = '',
-        $size = ''
     ) {
         $this->order_detail_id = $order_detail_id;
         $this->product_id = $product_id;
         $this->cart_id = $cart_id;
-        $this->quantity = $quantity;
-        $this->note = $note;
         $this->category_id = $category_id;
         $this->name = $name;
         $this->price = $price;
         $this->description = $description;
         $this->image_url = $image_url;
-        $this->size = $size;
     }
-
+    // Remove later
     public function getTotalPrice()
     {
-        $unitPrice = $this->price;
-        if ($this->size === 'Medium') {
-            $unitPrice += 3000;
-        } else if ($this->size === 'Large') {
-            $unitPrice += 6000;
-        }
-        return $unitPrice * $this->quantity;
+        return $this->price;
     }
 
     public static function tableName(): string
@@ -63,7 +49,7 @@ class CartItem extends DBModel
 
     public function attributes(): array
     {
-        return ['order_detail_id', 'product_id', 'cart_id', 'quantity', 'note', 'category_id', 'name', 'price', 'description', 'image_url', 'size'];
+        return ['order_detail_id', 'product_id', 'cart_id', 'category_id', 'name', 'price', 'description', 'image_url'];
     }
 
     public function labels(): array
@@ -73,12 +59,9 @@ class CartItem extends DBModel
                 'order_detail_id' => 'Id',
                 'product_id' => 'Product Id',
                 'cart_id' => 'Cart ID',
-                'quantity' => 'Quantity',
-                'note' => 'Note',
                 'name' => 'Product name',
                 'price' => 'Price',
                 'description' => 'Description',
-                'size' => 'Size',
             ];
     }
 
@@ -128,14 +111,11 @@ class CartItem extends DBModel
                     $item['order_detail_id'],
                     $item['product_id'],
                     $item['cart_id'],
-                    $item['quantity'],
-                    $item['note'],
                     $item['category_id'],
                     $item['name'],
                     $item['price'],
                     $item['description'],
                     $item['image_url'],
-                    $item['size']
                 );
         }
         return $list;
@@ -149,11 +129,5 @@ class CartItem extends DBModel
         return true;
     }
 
-    public static function update($id, $newNote, $newQuantity)
-    {
-        $sql = "UPDATE cart_detail SET note = '" . $newNote . "' , quantity = '" . $newQuantity . "' WHERE order_detail_id ='" . $id . "'";
-        $stmt = self::prepare($sql);
-        $stmt->execute();
-        return true;
-    }
+
 }

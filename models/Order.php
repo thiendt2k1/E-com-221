@@ -106,7 +106,7 @@ class Order extends DBModel
         $totalPayment = 0;
         $db = Database::getInstance();
         $req = $db->query(
-            "select products.price, order_detail.order_id, orders.id, order_detail.quantity
+            "select products.price, order_detail.order_id, orders.id
             from ((order_detail
             inner join products on order_detail.product_id = products.id)
             inner join orders on order_detail.order_id = orders.id) 
@@ -115,13 +115,9 @@ class Order extends DBModel
         
         foreach ($req->fetchAll() as $item) {
             $unitPrice = $item['price'];
-            if($item['size'] == 'medium') {
-                $unitPrice += 3000;
-            } else if($item['size'] == 'large') {
-                $unitPrice += 6000;
-            }
-            $totalPrice += $unitPrice * $item['quantity'];
-            $totalPayment += $item['quantity'];
+
+            $totalPrice += $unitPrice;
+            $totalPayment += 1;
         }    
         array_push($list, $totalPrice, $totalPayment);
         return $list;
@@ -180,14 +176,11 @@ class Order extends DBModel
                 OrderItem(
                     $item['product_id'],
                     $item['cart_id'],
-                    $item['quantity'],
-                    $item['note'],
                     $item['category_id'],
                     $item['name'],
                     $item['price'],
                     $item['description'],
                     $item['image_url'],
-                    $item['size']
                 );
         }
         return $list;

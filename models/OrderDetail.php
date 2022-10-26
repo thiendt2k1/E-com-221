@@ -12,24 +12,15 @@ class OrderDetail extends DBModel
     public string $id = '';
     public string $product_id = '';
     public string $order_id = '';
-    public string $quantity = '';
-    public string $note = '';
-    public string $size = '';
 
     public function __construct(
         $id = '',
         $product_id = '',
         $order_id = '',
-        $quantity = '',
-        $note = '',
-        $size = ''
     ) {
         $this->id = $id;
         $this->product_id = $product_id;
         $this->order_id = $order_id;
-        $this->quantity = $quantity;
-        $this->note = $note;
-        $this->size = $size;
     }
 
     public static function tableName(): string
@@ -39,7 +30,7 @@ class OrderDetail extends DBModel
 
     public function attributes(): array
     {
-        return ['id', 'product_id', 'order_id', 'quantity', 'note', 'size'];
+        return ['id', 'product_id', 'order_id'];
     }
 
     public function labels(): array
@@ -49,9 +40,6 @@ class OrderDetail extends DBModel
                 'id' => 'ID',
                 'product_id' => 'Product ID',
                 'order_id' => 'Order ID',
-                'quantity' => 'Quantity',
-                'note' => 'Note',
-                'size' => 'Size'
             ];
     }
 
