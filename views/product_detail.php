@@ -1,6 +1,7 @@
 <?php
 
 use app\core\Application;
+use app\models\CartItem;
 
 if (Application::isGuest()) {
     Application::$app->response->redirect('/login');
@@ -68,10 +69,7 @@ if (Application::isGuest()) {
                         </ol>
                         </div>
                             <?php   $a = array();
-                                    $b = array();
-                                    
                                     if ($params['user']->getMovieIds() == NULL):
-                                        print_r("HELLO");
                                         $a = array('');
                                     else:
                                         $a = $params['user']->getMovieIds();
@@ -87,11 +85,26 @@ if (Application::isGuest()) {
                             </div>
                             <?php else: ?>
                             <div class="product-detail-button1">
-                            <button type="submit" id="liveToastBtn">
+                                <?php $b = array();
+                                    if (CartItem::getProducts($params['items']) == NULL):
+                                        $b = array('');
+                                    else:
+                                        $b = CartItem::getProducts($params['items']);
+                                    endif;
+                                    if (in_array($params['product']->id,$b)):
+                                ?>
+                                <button disabled>
+                                <img 
+                                                        src="/images/confirm.svg"
+                                                        alt="" />   
+                                </button>
+                                <?php else: ?>
+                                <button type="submit" id="liveToastBtn">
                                 <img 
                                                         src="/images/cart.png"
                                                         alt="" />   
                             </button>
+                            <?php endif; ?>
                             </div>
                             <?php endif; ?> 
                     </div>

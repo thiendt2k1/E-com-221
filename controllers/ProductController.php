@@ -11,6 +11,7 @@ use app\core\Application;
 use app\core\Request;
 use app\models\Cart;
 use app\models\CartDetail;
+use app\models\CartItem;
 use app\models\Category;
 use app\models\Record;
 use app\models\User;
@@ -109,7 +110,7 @@ class ProductController extends Controller
         }
         $user_id = Application::$app->session->get('user');
         $user = User::getUserInfo($user_id);
-
+        $cart_id = Application::$app->cart->id;
         $addToCart = false;
 
         if ($request->getMethod() === 'post') {
@@ -124,7 +125,7 @@ class ProductController extends Controller
             $addToCart = true;
         }
 
-        $data = array('product' => $product, 'addToCart' => $addToCart, 'user' => $user);
+        $data = array('product' => $product, 'addToCart' => $addToCart, 'user' => $user, 'items' => $cart_id);
         return $this->render('product_detail', $data);
     }
 }
