@@ -67,8 +67,9 @@ if (Application::isGuest()) {
                     
                         </ol>
                         </div>
-                        <div class="product-detail-button">
                             <?php   $a = array();
+                                    $b = array();
+                                    
                                     if ($params['user']->getMovieIds() == NULL):
                                         print_r("HELLO");
                                         $a = array('');
@@ -77,19 +78,22 @@ if (Application::isGuest()) {
                                     endif;
                                     if (in_array($params['product']->id,$a)):      
                             ?>
-                            <a href="<?php echo $params['product']->download_url ?>">
+                            <div class="product-detail-button">
+                            <a href="<?php echo $params['product']->download_url ?>" download>
                                 <img class="item-button-image"
                                                         src="\images\Download.svg"
                                                         alt="" />
                             </a>
+                            </div>
                             <?php else: ?>
-                            <button type="submit" id="liveToastBtn" href="<?php echo $params['product']->download_url?>" download>
-                                <img class="item-button-image"
+                            <div class="product-detail-button1">
+                            <button type="submit" id="liveToastBtn">
+                                <img 
                                                         src="/images/cart.png"
                                                         alt="" />   
                             </button>
+                            </div>
                             <?php endif; ?> 
-                        </div>
                     </div>
                     <div class="col-md-12 col-lg-6">
                             
