@@ -13,7 +13,9 @@
           <dt>ID</dt><dd><?= $params['productModel']->getId() ?></dd>
           <dt>Category</dt><dd><?= $params['productModel']->getCategory() ?></dd>
           <dt>Description</dt><dd><?= $params['productModel']->getDescription() ?></dd>
-          <dt>Price</dt><dd><?= $params['productModel']->getPrice() ?></dd>
+          <dt>Director</dt><dd><?= implode(',',$params['productModel']->getDirector()) ?></dd>
+          <dt>Stars</dt><dd><?= implode(',',$params['productModel']->getStars()) ?></dd>
+          <dt>Price</dt><dd><?= $params['productModel']->getPrice() ?> VND</dd>
         </dl>
       </div>
     </section>

@@ -31,13 +31,31 @@
             <div class="form-group col-md-3">
               <?php echo $form->field($productModel, 'price') ?>
             </div>
-            <div class="form-group col-md-3">
+
+            </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <?php echo $form->field($productModel, 'description') ?>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <?php echo $form->field($productModel, 'director') ?>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <?php echo $form->field($productModel, 'stars') ?>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
               <?php echo $form->field($productModel, 'image_url') ?>
             </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <?php echo $form->field($productModel, 'description') ?>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <?php echo $form->field($productModel, 'download_url') ?>
             </div>
           </div>
           <div class="form-row">
