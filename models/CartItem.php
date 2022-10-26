@@ -97,6 +97,21 @@ class CartItem extends DBModel
         return $this->list . ' ' . $this->status;
     }
 
+    public static function getProducts($cart_id)
+    {
+        $list = [];
+        $db = Database::getInstance();
+        $req = $db->query(
+            "SELECT product_id
+            FROM cart_detail JOIN products ON cart_detail.product_id = products.id 
+            WHERE cart_detail.cart_id = '" . $cart_id . "';"
+        );
+
+        foreach ($req->fetchAll() as $item) {
+            $list[] = $item['product_id'];
+        }
+        return $list;
+    }
     public static function getCartItem($cart_id)
     {
         $list = [];
