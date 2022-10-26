@@ -9,49 +9,13 @@ if (Application::isGuest()) {
 
 <?php
 
-function extraPrice($size, $price)
-{
-    $extraPrice = $price;
-    switch ($size) {
-        case 'Small':
-            $extraPrice += 0;
-            break;
-        case 'Medium':
-            $extraPrice += 3000;
-            break;
-        case 'Large':
-            $extraPrice += 6000;
-            break;
-        default:
-            break;
-    }
-    return $extraPrice;
-}
 
-function sizeContent($size)
-{
-    $str = '';
-    switch ($size) {
-        case 'Small':
-            $str = 'Small';
-            break;
-        case 'Medium':
-            $str = 'Meidum (+3.000đ)';
-            break;
-        case 'Large':
-            $str = 'Large (+6.000đ)';
-            break;
-        default:
-            break;
-    }
-    return $str;
-}
 
 function total($params)
 {
     $total = 0;
     foreach ($params as $param) {
-        $total += extraPrice($param->size, $param->price) * $param->quantity;
+        $total += $param->price;
     }
     return $total;
 }
@@ -84,21 +48,7 @@ function total($params)
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-sm-9 col-9">
                                                 <h6>' . $param->name . '</h6>
-                                                <div>Giá đơn vị: ' . number_format($param->price, 0, ',', '.') . ' đ</div>
-                                                <div>Size: ' . sizeContent($param->size) . '</div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                <div>Quantity: ' . $param->quantity . '</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            
-                                            <div class="col-lg-6 col-sm-8">
-                                                <div class="input-group mb-3">
-                                                    <input type="text" id="cart-page__note" class="form-control"
-                                                        placeholder="Note" aria-label="note"
-                                                        aria-describedby="basic-addon1" value="' . $param->note . '">
-                                                </div>
+                                                <div>Price: ' . number_format($param->price, 0, ',', '.') . ' đ</div>
                                             </div>
                                         </div>
                                     </div>
@@ -113,13 +63,13 @@ function total($params)
                         </div>
                         <div class="cart-page-divider"></div>
                         <div class="cart-page__content__total">
-                            <div>Tạm tính</div>
+                            <div>Temporary</div>
                             <div><?php echo number_format(total($params['items']), 0, ',', '.') ?>đ</div>
                         </div>
 
                         <div class="cart-page__content__footer">
                             <div>
-                                <div>Thành tiền</div>
+                                <div>Amount</div>
                                 <div class="cart-page-total">
                                     <?php echo number_format(total($params['items']), 0, ',', '.') ?>đ</div>
                             </div>

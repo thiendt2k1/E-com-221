@@ -52,14 +52,6 @@ function total($params)
                                                                 <h6>' . $param->name . '</h6>
                                                                 <div>Price: ' . number_format($param->price, 0, ',', '.') . ' đ</div>
                                                             </div>
-                                                            <div class="col-lg-3 col-md-3 col-sm-8 col-8">
-                                                                <div class="product-detail-footer">
-                                                                    <div class="product-detail-footer-quantity">
-                                                                        Quantity: <input type="text" name="quantity" class="form-control quantity-input"
-                                                                            id="product-quantity" value="1">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                             <div class="col-lg-1 col-md-1 col-sm-4 col-4">
                                                                 <a href="/cart?action=delete&id=' . $param->order_detail_id . '">
                                                                     <img src="/images/delete.svg" class="cart-page__delete" />
@@ -82,13 +74,13 @@ function total($params)
                         </div>
                         <div class="cart-page-divider"></div>
                         <div class="cart-page__content__total">
-                            <div>Tạm tính</div>
+                            <div>Temporary</div>
                             <div><?php echo number_format(total($params['items']), 0, ',', '.') ?>đ</div>
                         </div>
 
                         <div class="cart-page__content__footer">
                             <div>
-                                <div>Thành tiền</div>
+                                <div>Amount</div>
                                 <div class="cart-page-total">
                                     <?php echo number_format(total($params['items']), 0, ',', '.') ?>đ</div>
                             </div>

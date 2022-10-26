@@ -40,7 +40,7 @@ function orderStatus($status)
             <div class="order-page__header">
                 <div class="row">
                     <div class="col">
-                        Số thứ tự
+                        No.
                     </div>
                     <div class="col">
                         Product ID

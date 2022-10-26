@@ -58,17 +58,6 @@
     margin-top: 20px;
 }
 
-.product-detail-footer-quantity {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.product-quantity {
-    margin: 0 15px;
-    width: 50px;
-}
 
 .item-button-disabled {
     background-color: #e4e4e4 !important;
@@ -244,10 +233,6 @@ ol.people li p span {
     border-radius: 0 0 8px 8px;
 }
 
-.quantity-input {
-    width: 50px;
-    margin: 0 10px;
-}
 
 .product-detail-right{
     margin-left: -80px;
