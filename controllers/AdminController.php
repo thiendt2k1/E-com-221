@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function index()
     {
-        $orders = Order::getAllOrders('done');
+        $orders = Order::getAllOrders('processing');
         $products = Product::getAllProducts();
         $users = User::getAllUsers();
         $list = Order::getTotalPrice();

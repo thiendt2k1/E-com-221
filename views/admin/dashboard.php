@@ -91,9 +91,9 @@
           <div class="col-7 d-flex align-items-center">
             <a href="/admin/orders">
             <div class="numbers">
-              <p class="card-category">Orders</p>
+              <p class="card-category">Pending orders</p>
                 <?php
-                    echo '<h4 class="card-title"> ' . $params['list'][1] .' </h4>';
+                    echo '<h4 class="card-title"> ' . count($params['orders']) .' </h4>';
                 ?>
             </div>
             </a>

@@ -18,6 +18,7 @@ use app\models\CartItem;
 use app\models\Product;
 use app\models\Order;
 use app\models\Record;
+use app\models\User;
 
 class OrdersController extends Controller
 {
@@ -45,7 +46,15 @@ class OrdersController extends Controller
     {   
         $orderId = Application::$app->request->getParam('id');
         $orderModel = Order::getOrderById($orderId);
+
+        $userId = $orderModel->getUserId();
+        $userModel = User::getUserInfo($userId);
+
+        $orderItems = Order::getOrderItem($orderId);
         if($request->getMethod() === 'get') {
+            foreach ($orderItems as $item) {
+                $userModel->update_movie($item->product_id);
+            };
             $orderModel->setStatus('done');
             $orderModel->update($orderModel);
             Application::$app->response->redirect('/admin/orders');

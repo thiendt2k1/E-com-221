@@ -167,15 +167,17 @@ class Order extends DBModel
         $db = Database::getInstance();
         $req = $db->query(
             "SELECT *
-            FROM cart_detail JOIN products ON cart_detail.product_id = products.id 
-            WHERE cart_detail.cart_id = '" . $order_id . "';"
+            FROM order_detail JOIN products ON order_detail.product_id = products.id 
+            WHERE order_detail.order_id = '" . $order_id . "';"
         );
 
         foreach ($req->fetchAll() as $item) {
+
             $list[] = new
                 OrderItem(
+                    $item[0],   //CartItem id
                     $item['product_id'],
-                    $item['cart_id'],
+                    $item['order_id'],
                     $item['category_id'],
                     $item['name'],
                     $item['price'],
@@ -183,6 +185,7 @@ class Order extends DBModel
                     $item['image_url'],
                 );
         }
+        print_r($list[0]);
         return $list;
     }
 

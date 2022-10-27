@@ -84,7 +84,6 @@ if (Application::isGuest()) {
                             </a>
                             </div>
                             <?php else: ?>
-                            <div class="product-detail-button1">
                                 <?php $b = array();
                                     if (CartItem::getProducts($params['items']) == NULL):
                                         $b = array('');
@@ -93,19 +92,23 @@ if (Application::isGuest()) {
                                     endif;
                                     if (in_array($params['product']->id,$b)):
                                 ?>
+                                <div class="product-detail-button2">
                                 <button disabled>
                                 <img 
                                                         src="/images/confirm.svg"
                                                         alt="" />   
                                 </button>
+                                </div>
                                 <?php else: ?>
+                                <div class="product-detail-button1">
                                 <button type="submit" id="liveToastBtn">
                                 <img 
                                                         src="/images/cart.png"
                                                         alt="" />   
-                            </button>
+                                </button>
+                                </div>
                             <?php endif; ?>
-                            </div>
+                            
                             <?php endif; ?> 
                     </div>
                     <div class="col-md-12 col-lg-6">

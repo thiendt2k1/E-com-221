@@ -85,7 +85,26 @@
     background-color:  transparent;
 }
 
-
+.product-detail-button2 button {
+    margin-top: 20px;
+    width: 60%;
+    height:6.4%;
+    font-size: 16px;
+    color: white;
+    background-color:  #41ef87;
+    border-radius: 48px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    border: none;
+    margin-left: 30%;
+}
+.product-detail-button2 button img {
+    margin-top: 1px;
+    width: 20%;
+    height: 90%;
+    font-size: 16px;
+    color: white;
+    background-color:  transparent;
+}
 
 .product-detail-note {
     margin-top: 20px;
@@ -106,7 +125,7 @@
     height:5%;
     font-size: 16px;
     color: white;
-    background-color:  #f6d365;
+    background-color:  #00b8e6;
     border-radius: 48px;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
     border: none;
