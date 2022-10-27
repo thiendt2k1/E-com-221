@@ -1,3 +1,7 @@
+<?php
+use app\models\CartItem;
+?>
+
 <div class="menu">
     <div class="menu__header">
         <img class="menu-image" src="/images/movies.png" alt="menu-image" />
@@ -87,31 +91,84 @@
             ?>
             <div class="row g-5">
                 <?php
-                foreach ($params['products'] as $param) {
-                    echo '
-                        <div class="col-xl-3 col-md-6 col-sm-12 col-xs-6">
-                            <a href="/product?id=' . $param->id . '">
-                                <div class="item-card">
-                                    <img src="' . $param->image_url . '" alt=""
-                                        class="item-image" />
-                                    <div class="item-info">
-                                        <p class="item-name">' . $param->name .' ('.$param->year.')</p>
-                                        <div class="item-footer">
-                                            <!-- <p>' . number_format($param->price, 0, ',', '.') . 'đ</p>-->
-                                            <p></p>
-                                            <div class="item-button">
-                                                <img class="item-button-image"
-                                                    src="\images\Download.svg"
-                                                    alt="" />
+                if ($params['user'] == ''):
+                    foreach ($params['products'] as $param) {
+                        echo '
+                            <div class="col-xl-3 col-md-6 col-sm-12 col-xs-6">
+                                <a href="/product?id=' . $param->id . '">
+                                    <div class="item-card">
+                                        <img src="' . $param->image_url . '" alt="" class="item-image" />
+                                        <div class="item-info">
+                                            <p class="item-name">' . $param->name .' ('.$param->year.')</p>
+                                            <div class="item-footer">
+                                                <!-- <p>' . number_format($param->price, 0, ',', '.') . 'đ</p>-->
+                                                <p></p>
+                                                <div class="item-button">
+                                                    <img class="item-button-image"
+                                                        src="/images/cart.png"
+                                                        alt="" />
+                                                </div>
+                                                <p></p>
                                             </div>
-                                            <p></p>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>';
-                }
-                ?> 
+                                </a>
+                            </div>';
+                    }
+                else:
+                    foreach ($params['products'] as $param) {
+                        $a = array('');
+                        $b = array('');
+                        if ($params['user']['user']->getMovieIds() == NULL):
+                            $a = array('');
+                        else:
+                            $a = $params['user']['user']->getMovieIds();
+                        endif;
+                        
+                        if (CartItem::getProducts($params['user']['items']) == NULL):
+                            $b = array('');
+                        else:
+                            $b = CartItem::getProducts($params['user']['items']);
+                        endif;
+                        
+                        ?>
+                            <div class="col-xl-3 col-md-6 col-sm-12 col-xs-6">
+                                <a href="/product?id=<?php echo $param->id ?>">
+                                    <div class="item-card">
+                                        <img src="<?php echo $param->image_url ?>" alt="" class="item-image" />
+                                        <div class="item-info">
+                                            <p class="item-name"><?php echo $param->name ?> ( <?php echo $param->year ?> )</p>
+                                            <div class="item-footer">
+                                                <p></p>
+                                                <?php if (in_array($param->id,$a)):
+                                                ?>
+                                                <div class="item-button1">
+                                                    <img class="item-button-image"
+                                                        src="/images/Download.svg"
+                                                        alt="" />
+                                                </div>
+                                                <?php elseif (in_array($param->id,$b)):
+                                                ?>
+                                                <div class="item-button2">
+                                                    <img class="item-button-image"
+                                                        src="/images/confirm.svg"
+                                                        alt="" />
+                                                </div>
+                                                <?php else: ?>
+                                                    <div class="item-button">
+                                                        <img class="item-button-image"
+                                                            src="/images/cart.png"
+                                                            alt="" />
+                                                    </div>
+                                                    <?php endif; ?>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                    <?php } ?> 
+                <?php endif; ?>
             </div>
         </div>
     </div>
