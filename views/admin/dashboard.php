@@ -44,7 +44,7 @@
             <div class="numbers">
               <p class="card-category">Revenue</p>
               <?php
-                  echo '<h4 class="card-title"> ' . $params['list'][0] . ' VNĐ' .' </h4>';
+                  echo '<h4 class="card-title"> ' . number_format($params['list'][0]) . ' VNĐ' .' </h4>';
               ?>
             </div>
           </div>
@@ -117,9 +117,6 @@
       <header class="panel-heading">
       </header>
       <div class="panel-body">
-        <p class="col-lg-12 text-center">
-          Copyright (C) <?=date('Y')?> - <a href="http://kevinrodriguez.io/">kevinrodriguez.io</a> 
-        </p>
       </div>
     </section>
   </div>

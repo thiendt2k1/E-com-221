@@ -1,11 +1,11 @@
 <script type="text/javascript">
-document.title = 'Approval Orders';
+document.title = 'Approved Orders';
 </script>
 <div class="row">
     <div class="col-lg-12">
         <section class="panel">
             <header class="panel-heading">
-                <h1>Approval Orders</h1>
+                <h1>Approved Orders</h1>
                 <a href="/admin/orders" class="btn btn-success">Back</a>
             </header>
             <div class="panel-body">

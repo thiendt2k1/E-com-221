@@ -6,7 +6,7 @@ document.title = 'Order Management';
         <section class="panel">
             <header class="panel-heading">
                 <h1>Order Management</h1>
-                <a href="/admin/orders/accepted" class="btn btn-success">Approval orders</a>
+                <a href="/admin/orders/accepted" class="btn btn-success">Approved orders</a>
                 <a href="/admin/orders/rejected" class="btn btn-success">Canceled orders</a>
             </header>
             <div class="panel-body">
