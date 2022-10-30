@@ -1,4 +1,7 @@
 <?php
+if(isset($_GET['returnBool'])) {
+    $returnBool = $_GET['returnBool'];
+}
 
 
 function total($params)
@@ -112,15 +115,15 @@ function total($params)
                             </div> -->
                             <div class="cart-page__content__header__checkbox">
                                 <input value="momo-pay" class="form-check-input" type="radio" name="payment_method"
-                                    id="flexRadioDefault2" onclick="document.getElementById('payment_form').action='momo.php';" checked>
+                                    id="flexRadioDefault2" onclick="" checked>
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     <img class="image-payment" src="/images/payment/momo.png">
                                     Momo
                                 </label>
                             </div>
                             <div class="cart-page__content__header__checkbox">
-                                <input value="zalo-pay" class="form-check-input" type="radio" name="payment_method"
-                                    id="flexRadioDefault2" onclick="document.getElementById('payment_form').action='vnpay_php/index.php';">
+                                <input value="vn-pay" class="form-check-input" type="radio" name="payment_method"
+                                    id="flexRadioDefault2" onclick="">
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     <img class="image-payment" src="/images/payment/vnpay.jpg">
                                     VNPay
@@ -193,6 +196,15 @@ function total($params)
 <?php
     if (isset($params['placedOrder'])) {
         if ($params['placedOrder']) {
+            echo "var toastLiveExample = document.getElementById('placeOrderToast')
+            var toast = new bootstrap.Toast(toastLiveExample)
+            toast.show()";
+        }
+    }
+    ?>
+<?php
+    if (isset($returnBool)) {
+        if ($returnBool) {
             echo "var toastLiveExample = document.getElementById('placeOrderToast')
             var toast = new bootstrap.Toast(toastLiveExample)
             toast.show()";

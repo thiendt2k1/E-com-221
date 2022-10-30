@@ -97,6 +97,22 @@ class CartController extends Controller
 
         $placedOrder = true;
 
+        $amount = Application::$app->request->getBody()['amount'];
+        $userFullName = Application::$app->user->getName();
+        $userEmail = Application::$app->user->getEmail();
+        $userPhoneNumber = Application::$app->user->getPhoneNumer();
+        if($userPhoneNumber == ''){
+            $userPhoneNumber = '0900000000';
+        }
+        switch($payment_method){
+            case "momo-pay":
+                header("Location:momo.php?amount=$amount&orderId=$order->id");    
+                break;  
+            case "vn-pay":
+                header("Location:vnpay_php/index.php?productID=$order->id&amount=$amount&userFullName=$userFullName&userEmail=$userEmail&userPhoneNumber=$userPhoneNumber");
+                break;  
+        }
+
         return $this->render('cart', [
             'items' => $items,
             'user' => $user,

@@ -93,6 +93,7 @@
 
                     </label>
                 </div> 
+                <input type="button" value="Hoàn tất" class="homebutton" id="btnHome" onClick="document.location.href='../cart?returnBool=true'" />
             </div>
             <p>
                 &nbsp;

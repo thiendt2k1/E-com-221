@@ -1,11 +1,18 @@
 <?php
-if (!empty($_POST)) {
-    $amount = $_POST["amount"];
-    $userFullName = $_POST["userFullName"];
-    $userEmail = $_POST["userEmail"];
-    $userPhoneNumber = $_POST["userPhoneNumber"];
-    //$productID = $_POST["productID"];
-}
+$productID = $_GET["productID"];
+$amount = $_GET["amount"];
+$userFullName = $_GET["userFullName"];
+$userEmail = $_GET["userEmail"];
+$userPhoneNumber = $_GET["userPhoneNumber"];
+
+
+// if (!empty($_POST)) {
+//     $amount = $_POST["amount"];
+//     $userFullName = $_POST["userFullName"];
+//     $userEmail = $_POST["userEmail"];
+//     $userPhoneNumber = $_POST["userPhoneNumber"];
+//     $productID = $_POST["productID"];
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">

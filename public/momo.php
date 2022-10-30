@@ -32,14 +32,15 @@ $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
 $orderInfo = "Thanh toán qua MoMo";
 $amount = "10000";
 $orderId = time() ."";
-$redirectUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";
-$ipnUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";
+$redirectUrl = "http://localhost:8000/cart?returnBool=true";
+$ipnUrl = "http://localhost:8000/cart?returnBool=true";
 $extraData = "";
 
 
-if (!empty($_POST)) {
-  $amount = $_POST["amount"];
-
+if (!empty($_GET)) {
+  $amount = $_GET["amount"];
+  $orderId = $_GET["orderId"];
+}
   $requestId = time() . "";
   $requestType = "captureWallet";
   //before sign HMAC SHA256 signature
@@ -64,5 +65,5 @@ if (!empty($_POST)) {
   //Just a example, please check more in there
 
   header('Location: ' . $jsonResult['payUrl']);
-}
+
 ?>
