@@ -134,6 +134,11 @@ input:checked + .slider:before {
             </div>
           </div>
           <div class="form-row">
+            <div class="form-group col-md-12">
+              <?php echo $form->field($productModel, 'stream_url') ?>
+            </div>
+          </div>
+          <div class="form-row">
             <div class="col-md-4">
               <button type="submit" class="btn btn-primary"><i class="fa fa-pencil"></i> Update</button>
             </div>
