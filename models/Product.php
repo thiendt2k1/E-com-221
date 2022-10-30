@@ -15,11 +15,13 @@ class Product extends DBModel
     public string $description;
     public string $image_url;
     public string $download_url;
+    public string $stream_url;
     public int $year;
     public int $duration;
     public string $director;
     public string $stars;
     public float $rating;
+    public string $enable;
 
 
 
@@ -31,11 +33,13 @@ class Product extends DBModel
         $description = '',
         $image_url = '',
         $download_url = '',
+        $stream_url = '',
         $year = 0,
         $duration = 0,
         $director = '',
         $stars = '',
         $rating = 0,
+        $enable = 'on',
     ) {
         $this->id = $id;
         $this->category_id = $category_id;
@@ -44,11 +48,13 @@ class Product extends DBModel
         $this->description = $description;
         $this->image_url = $image_url;
         $this->download_url = $download_url;
+        $this->stream_url = $stream_url;
         $this->year = $year;
         $this->duration = $duration;
         $this->director = $director;
         $this->stars = $stars;
         $this->rating = $rating;
+        $this->enable = $enable;
 
     }
 
@@ -74,6 +80,9 @@ class Product extends DBModel
     public function setDownloadUrl($download_url) { $this->download_url = $download_url; }
     public function getDownloadUrl() { return $this->download_url; } 
 
+    public function setStreamUrl($stream_url) { $this->stream_url = $stream_url; }
+    public function getStreamUrl() { return $this->stream_url; } 
+
     public function setYear($year) { $this->year = $year; }
     public function getYear() { return $this->year; } 
 
@@ -88,6 +97,10 @@ class Product extends DBModel
 
     public function setRating($rating) { $this->rating = $rating; }
     public function getRating() { return $this->rating; } 
+
+    public function setEnable($enable) { $this->enable = $enable; }
+    public function getEnable() { return $this->enable; } 
+
     public static function getNameById($id) 
     {
         $productModel = Product::getProductDetail($id);
@@ -113,7 +126,7 @@ class Product extends DBModel
 
     public function attributes(): array
     {
-        return ['id', 'category_id', 'name', 'price', 'description', 'image_url', 'download_url', 'year', 'duration', 'director', 'stars', 'rating'];
+        return ['id', 'category_id', 'name', 'price', 'description', 'image_url', 'download_url', 'stream_url', 'year', 'duration', 'director', 'stars', 'rating','enable'];
     }
    
     public function labels(): array
@@ -125,12 +138,14 @@ class Product extends DBModel
             'description' => 'Description',
             'image_url' => 'Product image',
             'download_url' => 'Download product',
+            'stream_url' => 'Stream product',
             'category_id' => 'Category ID',
             'year' => 'Year',
             'duration' => 'Duration',
             'director' => 'Director',
             'stars' => 'Stars',
             'rating' => 'Rating',
+            'enable' => 'Enable',
         ];
     }
     
@@ -161,10 +176,14 @@ class Product extends DBModel
                                     price='" . $product->price . "', 
                                     description='" . $product->description . "' ,
                                     year='" . $product->year . "' ,
+                                    image_url='" . $product->image_url . "' ,
+                                    download_url='" . $product->download_url . "' ,
+                                    stream_url='" . $product->stream_url . "' ,
                                     duration='" . $product->duration . "' ,
                                     director='" . $product->director . "' ,
                                     stars='" . $product->stars . "' ,
-                                    rating='" . $product->rating . "' 
+                                    rating='" . $product->rating . "' , 
+                                    enable='" . $product->enable . "' 
                                     WHERE id='" . $product->id . "'";
         $statement = self::prepare($sql);
         $statement->execute();
@@ -188,7 +207,7 @@ class Product extends DBModel
         $req = $db->query('SELECT * FROM products');
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['stream_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating'], $item['enable']);
         }
 
         return $list;
@@ -199,7 +218,7 @@ class Product extends DBModel
         $db = Database::getInstance();
         $req = $db->query('SELECT * FROM products WHERE id = "' . $id . '"');
         $item = $req->fetchAll()[0];
-        $product = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
+        $product = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['stream_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating'], $item['enable']);
         return $product;
     }
 
@@ -210,7 +229,7 @@ class Product extends DBModel
         $req = $db->query('SELECT * FROM products WHERE category_id = "' . $category_id . '"');
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['image_url'], $item['download_url'], $item['stream_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating'], $item['enable']);
         }
         return $list;
     }
@@ -222,7 +241,7 @@ class Product extends DBModel
         $req = $db->query("SELECT * FROM products WHERE name LIKE '%" . $keyword . "%';");
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['image_url'], $item['download_url'], $item['stream_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating'], $item['enable']);
         }
         return $list;
     }

@@ -50,8 +50,10 @@ class Request
         }
         if ($this->getMethod() === 'post') {
             foreach ($_POST as $key => $value) {
+                print_r(filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS));
                 $body[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
-            }
+            };
+
         }
 
         return $body;

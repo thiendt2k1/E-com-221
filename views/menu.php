@@ -93,6 +93,7 @@ use app\models\CartItem;
                 <?php
                 if ($params['user'] == ''):
                     foreach ($params['products'] as $param) {
+                        if($param->enable === 'on'){
                         echo '
                             <div class="col-xl-3 col-md-6 col-sm-12 col-xs-6">
                                 <a href="/product?id=' . $param->id . '">
@@ -114,9 +115,11 @@ use app\models\CartItem;
                                     </div>
                                 </a>
                             </div>';
+                        }
                     }
                 else:
                     foreach ($params['products'] as $param) {
+                        if($param->enable === 'on'){
                         $a = array('');
                         $b = array('');
                         if ($params['user']['user']->getMovieIds() == NULL):
@@ -167,7 +170,8 @@ use app\models\CartItem;
                                     </div>
                                 </a>
                             </div>
-                    <?php } ?> 
+                    <?php } 
+                    }?> 
                 <?php endif; ?>
             </div>
         </div>

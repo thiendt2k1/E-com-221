@@ -56,14 +56,6 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function stores()
-    {
-        $stores = Store::getAll();
-        $this->setLayout('main');
-        return $this->render('stores', [
-            'store' => $stores
-        ]);
-    }
 
     public function login(Request $request)
     {

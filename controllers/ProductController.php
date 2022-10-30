@@ -76,6 +76,7 @@ class ProductController extends Controller
         $categories = Category::getAllCategories();
         if ($request->getMethod() === 'post') {
             $productModel->loadData($request->getBody());
+            if(!empty($_POST['enable'])){$productModel->setEnable('on');}else{$productModel->setEnable('off');}
             $productModel->update($productModel);
             Application::$app->response->redirect('/admin/products');
         } else if ($request->getMethod() === 'get') {

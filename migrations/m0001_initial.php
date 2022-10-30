@@ -122,6 +122,7 @@ class m0001_initial
             `name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `image_url` varchar(1000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `download_url` varchar(1000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+            `stream_url` varchar(1000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `price` int(12) NOT NULL,
             `description` varchar(4000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `year` int(11),
@@ -129,6 +130,7 @@ class m0001_initial
             `director` varchar(4000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `stars` varchar(4000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
             `rating` int(12),
+            `enable` varchar(100),
             `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
             `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
@@ -192,7 +194,7 @@ class m0001_initial
             ADD PRIMARY KEY (`id`),
             ADD KEY `category_id` (`category_id`);
 
-            
+
             --
             -- Constraints for dumped tables
             --
