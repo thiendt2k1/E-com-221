@@ -7,13 +7,6 @@ class m0002_importData
     public function up()
     {
 
-        $db = Application::$app->db;
-        $sql = "INSERT INTO ecom.stores (id,address,status,image_url,created_at,updated_at,open_time,phone) VALUES
-            ('117','114 Đường 9A Khu Dân cư Trung Sơn','hoạt động','https://minio.thecoffeehouse.com/image/admin/store/5b21f8cb1acd4d02032668ea_trung_20son_201.jpeg','2021-10-30 03:15:23','2021-10-30 03:15:23','7:00 - 22:00','02871087088'),
-            ('129','93/5 Nguyễn Ảnh Thủ','hoạt động','https://minio.thecoffeehouse.com/image/admin/store/5b21f8cb1acd4d02032668eb_nguyen_20anh_20thu_201.jpeg','2021-10-30 03:15:23','2021-10-30 03:15:23','7:00 - 22:00','02871087088'),
-            ('18','141 Nguyễn Thái Bình','hoạt động','https://minio.thecoffeehouse.com/image/admin/store/5b21f8cb1acd4d02032668ee_5b21f8cb1acd4d02032668ee_nguyen_20thai_20binh_201_20.jpeg','2021-10-30 03:15:23','2021-10-30 03:15:23','7:00 - 22:00','02871087088');";
-        $db->pdo->exec($sql);
-
 		$db = Application::$app->db;
         $sql = "INSERT INTO ecom.users (id,firstname,lastname,email,phone_number,password,image_url,role,movie_ids,created_at,updated_at) VALUES 
             ('6191e42fe4e3f','admin','admin','admin@gmail.com','0924955363','" . password_hash('12345678', PASSWORD_DEFAULT) . "','','admin','5b03966a1acd4d5bbd672373,5b03966a1acd4d5bbd672374,5b03966a1acd4d5bbd672375,5b03966a1acd4d5bbd672377,5b03966a1acd4d5bbd672378,5b03966a1acd4d5bbd67237a,5b03966a1acd4d5bbd67237b,5b03966a1acd4d5bbd67237c,5b03966a1acd4d5bbd67237e,5b03966a1acd4d5bbd67237f,5b03966a1acd4d5bbd672380,5b03966a1acd4d5bbd672390,5b03966a1acd4d5bbd672391,5b03966a1acd4d5bbd672393,5b03966a1acd4d5bbd672394,5b03966a1acd4d5bbd672395,5b03966a1acd4d5bbd672397,5b03966a1acd4d5bbd672398,5b03966a1acd4d5bbd67239c,5b03966a1acd4d5bbd67239d,5b03966a1acd4d5bbd67239e,5b03966a1acd4d5bbd6723a0,5b03966a1acd4d5bbd6723a1,5b03966a1acd4d5bbd6723a2,5b03966a1acd4d5bbd6723a3','2021-11-15 11:38:07','2021-11-15 11:38:07'),

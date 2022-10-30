@@ -26,7 +26,6 @@ header("Content-type: text/html; charset=utf-8");
     <link rel="stylesheet" href="/css/cart.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/about.css">
-    <link rel="stylesheet" href="/css/stores.css">
     <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/order.css">
 
@@ -70,9 +69,6 @@ header("Content-type: text/html; charset=utf-8");
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/menu">Libraries</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/stores">Warehouse</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About Us</a>
@@ -162,7 +158,6 @@ header("Content-type: text/html; charset=utf-8");
                                             <ul>
                                                 <li><a color="white" href="/">Home</a></li>
                                                 <li><a href="/menu">Libraries</a></li>
-                                                <li><a href="/stores">Warehouse</a></li>
                                                 <li><a href="/about">About us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
                                             </ul>
@@ -178,13 +173,11 @@ header("Content-type: text/html; charset=utf-8");
                                         <div class="col-md-12 col-lg-4">
                                             <h6>Contact us</h6>
                                             <ul>
-                                                <li>Head Office 1: 86 - 88 Cao Thang, Ward 4, District 3, Ho Chi Minh,
-                                                    Vietnam. Head Office 2: Floor 3 & 4 The Hub Building - 195/10E Dien
-                                                    Bien
-                                                    Phu, Ward 15, Binh Thanh District, Ho Chi Minh, Vietnam.</li>
+                                                <li>Head Office 1: 268 Lý Thường Kiệt, Phường 14, Quận 10, TP HCM,
+                                                    Vietnam.
+                                                </li>
                                                 <li>
-                                                    Head Office 2: Floor 3 & 4 The Hub Building - 195/10E Dien Bien Phu,
-                                                    Ward 15, Binh Thanh District, Ho Chi Minh, Vietnam.
+                                                    Head Office 2: Đường 621, Khu đô thị Đại học Quốc gia TP. HCM, Dĩ an, Bình Dương, Vietnam.
                                                 </li>
                                                 <li>
                                                     (+84)906 600 272

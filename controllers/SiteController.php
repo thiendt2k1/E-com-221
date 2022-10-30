@@ -11,7 +11,6 @@ use app\middlewares\AuthMiddleware;
 
 use app\models\LoginForm;
 use app\models\Product;
-use app\models\Store;
 use app\models\User;
 
 class SiteController extends Controller

@@ -75,11 +75,6 @@ if($userModel->getRole() != 'admin') {
             </a>
           </li>
           <li>
-            <a href="/admin/stores">
-              <i class="fa fa-store" aria-hidden="true"></i> &nbsp;Store Management
-            </a>
-          </li>
-          <li>
             <a href="/admin/profile">
               <i class="fas fa-user-cog" aria-hidden="true"></i>&nbsp;My Account
             </a>

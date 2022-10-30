@@ -133,23 +133,6 @@ class m0001_initial
             `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
-            -- --------------------------------------------------------
-
-            --
-            -- Table structure for table `stores`
-            --
-
-            CREATE TABLE `stores` (
-            `id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-            `address` varchar(1000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-            `status` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-            `image_url` varchar(4000) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-            `open_time` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-            `phone` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-            `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-            `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
-
             --
             -- Indexes for dumped tables
             --
@@ -209,12 +192,7 @@ class m0001_initial
             ADD PRIMARY KEY (`id`),
             ADD KEY `category_id` (`category_id`);
 
-            --
-            -- Indexes for table `stores`
-            --
-            ALTER TABLE `stores`
-            ADD PRIMARY KEY (`id`);
-
+            
             --
             -- Constraints for dumped tables
             --
