@@ -3,7 +3,7 @@
 </script> 
 <div class="row">
   <div class="col-lg-12">
-    <section class="panel">
+    <section class="panel" style="box-shadow: none;">
       <header class="panel-heading">
         <h1>Add Category</h1>
         <a href="/admin/categories" class="btn btn-success">Back</a>
@@ -15,7 +15,7 @@
               <input type="text" class="form-control" id="name" name="name" placeholder="Name">
             </div>
           <div class="form-row">
-            <div class="col-md-4" >
+            <div class="col-md-4" style="margin-top: 25px;" >
               <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i> Create </button>
             </div>
           </div>

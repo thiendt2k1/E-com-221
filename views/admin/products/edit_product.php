@@ -64,7 +64,7 @@ input:checked + .slider:before {
 </style>
 <div class="row">
   <div class="col-lg-12">
-    <section class="panel">
+    <section class="panel" style="box-shadow: none;">
       <header class="panel-heading">
         <h1>Change Product Detail</h1>
         <a href="/admin/products" class="btn btn-success">Back</a>
@@ -135,7 +135,7 @@ input:checked + .slider:before {
           </div>
           <div class="form-row">
             <div class="col-md-4">
-              <button type="submit" class="btn btn-primary"><i class="fa fa-pencil"></i> Chỉnh sửa sản phẩm</button>
+              <button type="submit" class="btn btn-primary"><i class="fa fa-pencil"></i> Update</button>
             </div>
           </div>
         <?php app\core\form\Form::end() ?>

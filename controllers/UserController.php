@@ -9,6 +9,7 @@ use app\core\Application;
 use app\core\Request;
 use app\models\User;
 use Dotenv\Util\Regex;
+use app\models\Product;
 
 class UserController extends Controller{
     public function __construct() {}
@@ -59,18 +60,28 @@ class UserController extends Controller{
 
     public function update(Request $request)
     {
+        $id = Application::$app->request->getParam('id');
+        $userModel = User::getUserInfo($id);
+        $b = array();
+        $a = array();
+        if ($userModel->getMovieIds() == NULL):
+            $a = array('');
+        else:
+            $a = $userModel->getMovieIds();
+            foreach($a as $id1){
+                $c = Product::getProductDetail($id1);
+                $b[]=$c;
+            }
+        endif;    
         if($request->getMethod() === 'post') {
-            $id = Application::$app->request->getParam('id');
-            $userModel = User::getUserInfo($id);
             $userModel->loadData($request->getBody());
             $userModel->update($userModel);
             Application::$app->response->redirect('/admin/users');
         } else if ($request->getMethod() === 'get') {
-            $id = Application::$app->request->getParam('id');
-            $userModel = User::getUserInfo($id);
             $this->setLayout('admin');
             return $this->render('/admin/users/edit_user', [
-                'userModel' => $userModel
+                'userModel' => $userModel,
+                'productModel' => $b
             ]);
         }        
     }
