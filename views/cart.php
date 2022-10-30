@@ -112,7 +112,7 @@ function total($params)
                             </div> -->
                             <div class="cart-page__content__header__checkbox">
                                 <input value="momo-pay" class="form-check-input" type="radio" name="payment_method"
-                                    id="flexRadioDefault2" onclick="document.getElementById('payment_form').action='momo.php';">
+                                    id="flexRadioDefault2" onclick="document.getElementById('payment_form').action='momo.php';" checked>
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     <img class="image-payment" src="/images/payment/momo.png">
                                     Momo
