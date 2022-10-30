@@ -60,7 +60,7 @@
           </div>
           <div class="form-row">
             <div class="col-md-4">
-              <button type="submit" class="btn btn-primary"><i class="fa fa-pencil"></i> Chỉnh sửa sản phẩm</button>
+              <button type="submit" class="btn btn-primary"><i class="fa fa-pencil"></i> Update</button>
             </div>
           </div>
         <?php app\core\form\Form::end() ?>
