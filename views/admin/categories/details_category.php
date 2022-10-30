@@ -3,7 +3,7 @@
 </script> 
 <div class="row">
   <div class="col-lg-6">
-    <section class="panel">
+    <section class="panel" style="box-shadow: none;">
       <header class="panel-heading">
         <h1>Category Detail</h1>
         <a href="/admin/categories" class="btn btn-success">Back</a>

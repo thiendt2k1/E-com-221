@@ -113,7 +113,7 @@
 
 <div class="row">
   <div class="col-lg-12">
-    <section class="panel">
+    <section class="panel" style="box-shadow: none;">
       <header class="panel-heading">
       </header>
       <div class="panel-body">

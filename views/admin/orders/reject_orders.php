@@ -3,7 +3,7 @@ document.title = 'Canceled orders';
 </script>
 <div class="row">
     <div class="col-lg-12">
-        <section class="panel">
+        <section class="panel" style="box-shadow: none;">
             <header class="panel-heading">
                 <h1>Canceled orders</h1>
                 <a href="/admin/orders" class="btn btn-success">Back</a>

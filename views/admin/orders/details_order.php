@@ -7,7 +7,7 @@ use app\core\Application;
 ?>
 <div class="row">
     <div class="col-lg-6">
-        <section class="panel">
+        <section class="panel" style="box-shadow: none;">
             <header class="panel-heading">
                 <h1>Order Details</h1>
                 <?php
