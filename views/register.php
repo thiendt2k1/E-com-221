@@ -36,15 +36,16 @@
                 <input type="checkbox" required>
                 <span style="color: #000000">I accept the Terms & Services</span>
             </div>
-            <div class="btn">
+            <div class="btn" style="width:100%;">
                 <button type="submit" class="button">Register</button>
+                <div class="login">
+            Do you have an account ?
+            <a href="/login">Sign in</a>
             </div>
+            
+        </div>
         <?php app\core\form\Form::end() ?>
     </div>
-    <div class="card-footer">
-        <div class="login">
-            Do you have an account ?
-            <a href="/login"><button id="login-link">Sign in</button></a>
-        </div>
-    </div>
 </div>
+
+    

@@ -16,18 +16,15 @@
                 <!-- <div class="row align-items-center remember">
                         <input type="checkbox">Nhớ tài khoản
                     </div> -->
-                <div class="form-group">
-                    <button type="submit" class="btn float-right login_btn">Sign in</button>
-                </div>
+            <div class="btn" style="width:100%;">
+                <button type="submit" class="button">Login</button>
+                <div class="login">
+                Become a Filmware member !<a href="/register"> Register</a>
             </div>
-            <div class="card-footer">
-                <div class="d-flex justify-content-center links">
-                    Become a Filmware member !<a href="/register">Register</a>
-                </div>
+            </div>
                 <!-- <div class="d-flex justify-content-center">
                         <a href="#">Forget Password ?</a>
                     </div> -->
-            </div>
         </div>
     </div>
     <?php app\core\form\Form::end() ?>
