@@ -150,6 +150,11 @@ use app\models\CartItem;
                                                         src="/images/Download.svg"
                                                         alt="" />
                                                 </div>
+                                                <div class="item-button1" style="margin-left:10px;">
+                                                    <img class="item-button-image"
+                                                        src="/images/images.svg"
+                                                        alt="" />
+                                                </div>
                                                 <?php elseif (in_array($param->id,$b)):
                                                 ?>
                                                 <div class="item-button2">

@@ -83,6 +83,13 @@ if (Application::isGuest()) {
                                                         alt="" />
                             </a>
                             </div>
+                            <div class="product-detail-button">
+                            <a href="<?php echo $params['product']->stream_url ?>" download>
+                                <img class="item-button-image"
+                                                        src="\images\images.svg"
+                                                        alt="" />
+                            </a>
+                            </div>
                             <?php else: ?>
                                 <?php $b = array();
                                     if (CartItem::getProducts($params['items']) == NULL):
