@@ -48,7 +48,7 @@
                 <td><?=$product->getId()?></td>
                 <td><?=$product->getName()?></td>
                 <td>
-                  <a class="fa fa-trash btn btn-danger btn-sm" href="/admin/users/delete?id=<?=$product->getId()?>"></a>
+                  <a class="fa fa-trash btn btn-danger btn-sm" href="/admin/users/delete/product?id=<?=$userModel->getId()?>&product_id=<?=$product->getId()?>"></a>
                 </td>
               </tr>
               <?php

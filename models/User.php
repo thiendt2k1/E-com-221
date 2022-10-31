@@ -187,5 +187,22 @@ class User extends UserModel
         $stmt= self::prepare($sql);
         $stmt->execute([$this->id]);
         return true;     
-    }   
+    } 
+    public function deleteProduct($movie_id)
+    {
+        $newMovieIds = $this->getMovieIds(); 
+        if (($key = array_search($movie_id, $newMovieIds)) !== false) {
+            unset($newMovieIds[$key]);
+        }
+        $statement = self::prepare(
+            "UPDATE users 
+            SET 
+                movie_ids = '" . implode(',',$newMovieIds) . "'
+            WHERE id = '" . $this->id . "';
+            "
+        );
+        $statement->execute();
+        return true;   
+    }  
 }
+ 

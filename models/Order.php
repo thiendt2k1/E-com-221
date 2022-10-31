@@ -185,7 +185,6 @@ class Order extends DBModel
                     $item['image_url'],
                 );
         }
-        print_r($list[0]);
         return $list;
     }
 
