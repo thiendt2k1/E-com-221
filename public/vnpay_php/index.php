@@ -29,6 +29,7 @@ $userPhoneNumber = $_GET["userPhoneNumber"];
         <!-- Custom styles for this template -->
         <link href="/vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">  
         <script src="/vnpay_php/assets/jquery-1.11.3.min.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
 
     <body>
