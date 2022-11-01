@@ -4,7 +4,7 @@ define('PROOT', '/erp_sales/');
 define('SITE_TITLE', 'ERP Sales');
 define('DEFAULT_LAYOUT', 'default');
 
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'erpsystem');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'quan0402');
