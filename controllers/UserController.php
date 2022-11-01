@@ -57,22 +57,29 @@ class UserController extends Controller{
             ]);
         }        
     }
+    public function deleteProduct(Request $request)
+    {
 
+            $id = Application::$app->request->getParam('id');
+            $productId = Application::$app->request->getParam('product_id');
+            $userModel = User::getUserInfo($id);
+            $userModel->deleteProduct($productId );
+            return Application::$app->response->redirect('/admin/users/edit?id=' . $id);
+      
+    }
     public function update(Request $request)
     {
         $id = Application::$app->request->getParam('id');
         $userModel = User::getUserInfo($id);
         $b = array();
-        $a = array();
-        if ($userModel->getMovieIds() == NULL):
-            $a = array('');
-        else:
-            $a = $userModel->getMovieIds();
+
+        $a = $userModel->getMovieIds();
+        if($a !== array('')){
             foreach($a as $id1){
                 $c = Product::getProductDetail($id1);
                 $b[]=$c;
             }
-        endif;    
+        } 
         if($request->getMethod() === 'post') {
             $userModel->loadData($request->getBody());
             $userModel->update($userModel);
