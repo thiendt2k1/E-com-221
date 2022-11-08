@@ -106,7 +106,7 @@ input:checked + .slider:before {
               <!-- <?php echo $form->field($productModel, 'enable') ?> -->
               <label class="switch">
                 <input name="enable" class="form-control" type="checkbox" <?php if($productModel->getEnable() == "on"): echo "checked"; endif; ?>>
-                <span class="slider round"></span>
+                <span class="slider round">On</span>
               </label>
             </div>
             </div>
