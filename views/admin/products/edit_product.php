@@ -8,7 +8,7 @@
   width: 60px;
   height: 34px;
 }
-.form-group .col-md-3-1{
+.form-group .col-md-3-1 .left{
   margin-left: 50px;
 }
 .switch input { 
@@ -102,7 +102,7 @@ input:checked + .slider:before {
             <div class="form-group col-md-3">
               <?php echo $form->field($productModel, 'price') ?>
             </div>
-            <div class="form-group col-md-3-1">
+            <div class="form-group col-md-3 left">
               <!-- <?php echo $form->field($productModel, 'enable') ?> -->
               <label class="switch">
                 <input name="enable" class="form-control" type="checkbox" <?php if($productModel->getEnable() == "on"): echo "checked"; endif; ?>>
