@@ -8,6 +8,7 @@
   width: 60px;
   height: 34px;
   margin-left: 200px;
+  margin-top: 25px;
 }
 
 .switch input { 
