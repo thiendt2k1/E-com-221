@@ -94,15 +94,15 @@ abstract class Model
     public function errorMessage()
     {
         return [
-            self::RULE_UNIQUE => '{field} đã tồn tại.',
-            self::RULE_REQUIRED => 'Trường dữ liệu này bắt buộc.',
-            self::RULE_EMAIL => 'Trường dữ liệu này phải là email hợp lệ.',
-            self::RULE_MIN => 'Ít nhất {min} ký tự.',
-            self::RULE_MAX => 'Nhiều nhất {max} ký tự.',
-            self::RULE_MATCH => 'Trường dữ liệu này phải trùng với {match}.',
-            self::RULE_NUMBER => 'Trường dữ liệu này phải là dạng số.',
-            self::RULE_INVALID_EMAIL => 'Email chưa được đăng ký.',
-            self::RULE_WRONG_PASSWORD => 'Mật khẩu không chính xác.',
+            self::RULE_UNIQUE => '{field} already exists.',
+            self::RULE_REQUIRED => 'This field is mandatory.',
+            self::RULE_EMAIL => 'Invalid email format.',
+            self::RULE_MIN => 'At least {min} characters.',
+            self::RULE_MAX => 'At most {max} characters.',
+            self::RULE_MATCH => 'This field must match with {match}.',
+            self::RULE_NUMBER => 'Digits only.',
+            self::RULE_INVALID_EMAIL => 'Invalid Email address.',
+            self::RULE_WRONG_PASSWORD => 'Incorrect password.',
         ];
     }
 
