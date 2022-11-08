@@ -7,7 +7,7 @@
   display: inline-block;
   width: 60px;
   height: 34px;
-  margin-left: 50px;
+  margin-left: 230px;
 }
 
 .switch input { 
