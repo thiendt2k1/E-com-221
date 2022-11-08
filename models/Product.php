@@ -229,7 +229,7 @@ class Product extends DBModel
         $req = $db->query('SELECT * FROM products WHERE category_id = "' . $category_id . '"');
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['image_url'], $item['download_url'], $item['stream_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating'], $item['enable']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['stream_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating'], $item['enable']);
         }
         return $list;
     }
@@ -241,7 +241,7 @@ class Product extends DBModel
         $req = $db->query("SELECT * FROM products WHERE name LIKE '%" . $keyword . "%';");
 
         foreach ($req->fetchAll() as $item) {
-            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['image_url'], $item['download_url'], $item['stream_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating'], $item['enable']);
+            $list[] = new Product($item['id'], $item['category_id'], $item['name'], $item['price'], $item['description'], $item['image_url'], $item['download_url'], $item['stream_url'], $item['year'], $item['duration'], $item['director'], $item['stars'], $item['rating'], $item['enable']);
         }
         return $list;
     }
