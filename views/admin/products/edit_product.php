@@ -68,13 +68,6 @@ input:checked + .slider:before {
       <header class="panel-heading">
         <h1>Change Product Detail</h1>
         <a href="/admin/products" class="btn btn-success">Back</a>
-        <div class="form-group col-md-3">
-              <!-- <?php echo $form->field($productModel, 'enable') ?> -->
-              <label class="switch">
-                <input name="enable" class="form-control" type="checkbox" <?php if($productModel->getEnable() == "on"): echo "checked"; endif; ?>>
-                <span class="slider round"></span>
-              </label>
-            </div>
       </header>
       <div class="panel-body">
         <?php $form = app\core\Form\Form::begin('', "post") ?>
@@ -107,7 +100,13 @@ input:checked + .slider:before {
             <div class="form-group col-md-3">
               <?php echo $form->field($productModel, 'price') ?>
             </div>
-            
+            <div class="form-group col-md-3">
+              <!-- <?php echo $form->field($productModel, 'enable') ?> -->
+              <label class="switch">
+                <input name="enable" class="form-control" type="checkbox" <?php if($productModel->getEnable() == "on"): echo "checked"; endif; ?>>
+                <span class="slider round"></span>
+              </label>
+            </div>
             </div>
           <div class="form-row">
             <div class="form-group col-md-12">
