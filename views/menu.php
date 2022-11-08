@@ -38,7 +38,7 @@ use app\models\CartItem;
                 All shows
             </h6>
         </a>
-        <a class="option" href="/menu?id=1">
+        <a class="option" href="/menu?category_id=1">
             <div class="option-image-block">
                 <img src="/images/movie-theater-icon.svg" alt="Movies" class="option-image" />
             </div>
@@ -46,7 +46,7 @@ use app\models\CartItem;
                 Movies
             </h6>
         </a>
-        <a class="option" href="/menu?id=2">
+        <a class="option" href="/menu?category_id=2">
             <div class="option-image-block">
                 <img src="/images/film-icon.png" alt="TV show" class="option-image" />
             </div>
@@ -54,7 +54,7 @@ use app\models\CartItem;
                 TV show
             </h6>
         </a>
-        <a class="option" href="/menu?id=3">
+        <a class="option" href="/menu?category_id=3">
             <div class="option-image-block">
                 <img src="/images/liveaction-icon.svg" alt="Live action" class="option-image" />
             </div>
@@ -62,7 +62,7 @@ use app\models\CartItem;
                 Live action
             </h6>
         </a>
-        <a class="option" href="/menu?id=4">
+        <a class="option" href="/menu?category_id=4">
             <div class="option-image-block">
                 <img src="/images/animated-icon.jpg" alt=" Animated" class="option-image" />
             </div>
@@ -70,7 +70,7 @@ use app\models\CartItem;
                 Animated
             </h6>
         </a>
-        <a class="option" href="/menu?id=6">
+        <a class="option" href="/menu?category_id=6">
             <div class="option-image-block">
                 <img src="/images/movies.png" alt="Other" class="option-image" />
             </div>
