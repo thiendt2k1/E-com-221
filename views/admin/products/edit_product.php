@@ -9,7 +9,7 @@
   height: 34px;
 }
 .form-group .col-md-3-1 .left{
-  margin-left: 50px;
+  align-items: flex-end;
 }
 .switch input { 
   opacity: 0;
