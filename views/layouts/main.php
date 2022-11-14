@@ -84,7 +84,7 @@ header("Content-type: text/html; charset=utf-8");
                 if (Application::isGuest() == 1) : ?>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="login__button nav-link" href="/login">Sign in</a>
+                        <a class="nav-link" href="/login">Sign in</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/register">Register</a>
