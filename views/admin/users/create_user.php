@@ -38,7 +38,7 @@
             </div>
           <div class="form-row">
             <div class="col-md-4">
-              <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i> Save </button>
+              <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i> Create </button>
             </div>
           </div>
         <?php app\core\form\Form::end() ?>

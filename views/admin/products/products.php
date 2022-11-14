@@ -6,7 +6,7 @@
     <section class="panel" style="box-shadow: none;">
       <header class="panel-heading">
         <h1>Products</h1>
-          <a href="/admin/products/create" class="btn btn-success">Back</a>
+          <a href="/admin/products/create" class="btn btn-success">Create</a>
       </header>
       <div class="panel-body">
         <table class="table table-striped table-hover dt-datatable">
