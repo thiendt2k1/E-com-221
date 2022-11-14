@@ -5,7 +5,7 @@
   <div class="col-lg-12">
     <section class="panel" style="box-shadow: none;">
       <header class="panel-heading">
-        <h1>Add User</h1>
+        <h1>Create</h1>
         <a href="/admin/users" class="btn btn-success">Back</a>
       </header>
       <div class="panel-body">
@@ -38,7 +38,7 @@
             </div>
           <div class="form-row">
             <div class="col-md-4">
-              <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i> Lưu </button>
+              <button type="submit" class="btn btn-primary"><i class="fa fa-cart-plus"></i> Save </button>
             </div>
           </div>
         <?php app\core\form\Form::end() ?>

@@ -2,7 +2,6 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h4 class="text-left">Profile Settings</h4>
     </div><br>
-    <a href="/admin" class="btn btn-success">Back</a>
     <?php $form = app\core\Form\Form::begin('', "post") ?><br>
     <div class="row">
         <div class="col-md-5 border-right">
